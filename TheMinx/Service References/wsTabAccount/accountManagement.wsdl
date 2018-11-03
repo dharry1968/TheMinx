@@ -1,0 +1,2765 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tns="http://service.accountmgmt.api.neo.tabcorp.com.au/" xmlns:ns1="http://schemas.xmlsoap.org/soap/http" name="accountManagement" targetNamespace="http://service.accountmgmt.api.neo.tabcorp.com.au/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xs:schema attributeFormDefault="unqualified" elementFormDefault="unqualified" targetNamespace="http://service.accountmgmt.api.neo.tabcorp.com.au/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+      <xs:element name="acknowledgeMyTab" type="tns:acknowledgeMyTab" />
+      <xs:element name="acknowledgeMyTabResponse" type="tns:acknowledgeMyTabResponse" />
+      <xs:element name="activateAccount" type="tns:activateAccount" />
+      <xs:element name="activateAccountResponse" type="tns:activateAccountResponse" />
+      <xs:element name="changePassword" type="tns:changePassword" />
+      <xs:element name="changePasswordResponse" type="tns:changePasswordResponse" />
+      <xs:element name="checkCreditCardEnrolment" type="tns:checkCreditCardEnrolment" />
+      <xs:element name="checkCreditCardEnrolmentResponse" type="tns:checkCreditCardEnrolmentResponse" />
+      <xs:element name="closeAccount" type="tns:closeAccount" />
+      <xs:element name="closeAccountResponse" type="tns:closeAccountResponse" />
+      <xs:element name="createAccount" type="tns:createAccount" />
+      <xs:element name="createAccountResponse" type="tns:createAccountResponse" />
+      <xs:element name="createPaymentGatewaySession" type="tns:createPaymentGatewaySession" />
+      <xs:element name="createPaymentGatewaySessionResponse" type="tns:createPaymentGatewaySessionResponse" />
+      <xs:element name="depositFunds" type="tns:depositFunds" />
+      <xs:element name="depositFundsPOLi" type="tns:depositFundsPOLi" />
+      <xs:element name="depositFundsPOLiResponse" type="tns:depositFundsPOLiResponse" />
+      <xs:element name="depositFundsResponse" type="tns:depositFundsResponse" />
+      <xs:element name="forgotPassword" type="tns:forgotPassword" />
+      <xs:element name="forgotPasswordResponse" type="tns:forgotPasswordResponse" />
+      <xs:element name="getAccountBalance" type="tns:getAccountBalance" />
+      <xs:element name="getAccountBalanceResponse" type="tns:getAccountBalanceResponse" />
+      <xs:element name="getAccountDetails" type="tns:getAccountDetails" />
+      <xs:element name="getAccountDetailsResponse" type="tns:getAccountDetailsResponse" />
+      <xs:element name="getAccountStatement" type="tns:getAccountStatement" />
+      <xs:element name="getAccountStatementResponse" type="tns:getAccountStatementResponse" />
+      <xs:element name="getAccountSummary" type="tns:getAccountSummary" />
+      <xs:element name="getAccountSummaryResponse" type="tns:getAccountSummaryResponse" />
+      <xs:element name="getAvailablePromotions" type="tns:getAvailablePromotions" />
+      <xs:element name="getAvailablePromotionsResponse" type="tns:getAvailablePromotionsResponse" />
+      <xs:element name="getChallengeQuestion" type="tns:getChallengeQuestion" />
+      <xs:element name="getChallengeQuestionResponse" type="tns:getChallengeQuestionResponse" />
+      <xs:element name="getCurrencyConversionRate" type="tns:getCurrencyConversionRate" />
+      <xs:element name="getCurrencyConversionRateResponse" type="tns:getCurrencyConversionRateResponse" />
+      <xs:element name="getGeneralAccountPreferences" type="tns:getGeneralAccountPreferences" />
+      <xs:element name="getGeneralAccountPreferencesResponse" type="tns:getGeneralAccountPreferencesResponse" />
+      <xs:element name="getOpenTicketCount" type="tns:getOpenTicketCount" />
+      <xs:element name="getOpenTicketCountResponse" type="tns:getOpenTicketCountResponse" />
+      <xs:element name="getPoliTransaction" type="tns:getPoliTransaction" />
+      <xs:element name="getPoliTransactionResponse" type="tns:getPoliTransactionResponse" />
+      <xs:element name="getPromoAndBBCount" type="tns:getPromoAndBBCount" />
+      <xs:element name="getPromoAndBBCountResponse" type="tns:getPromoAndBBCountResponse" />
+      <xs:element name="getRaceBetPreferences" type="tns:getRaceBetPreferences" />
+      <xs:element name="getRaceBetPreferencesResponse" type="tns:getRaceBetPreferencesResponse" />
+      <xs:element name="getRecentStatements" type="tns:getRecentStatements" />
+      <xs:element name="getRecentStatementsResponse" type="tns:getRecentStatementsResponse" />
+      <xs:element name="getRedemptionHistory" type="tns:getRedemptionHistory" />
+      <xs:element name="getRedemptionHistoryResponse" type="tns:getRedemptionHistoryResponse" />
+      <xs:element name="initPoliTransaction" type="tns:initPoliTransaction" />
+      <xs:element name="initPoliTransactionResponse" type="tns:initPoliTransactionResponse" />
+      <xs:element name="redeemPromotion" type="tns:redeemPromotion" />
+      <xs:element name="redeemPromotionResponse" type="tns:redeemPromotionResponse" />
+      <xs:element name="registerCreditCard" type="tns:registerCreditCard" />
+      <xs:element name="registerCreditCardResponse" type="tns:registerCreditCardResponse" />
+      <xs:element name="removeCreditCard" type="tns:removeCreditCard" />
+      <xs:element name="removeCreditCardResponse" type="tns:removeCreditCardResponse" />
+      <xs:element name="saveCreditCardDetails" type="tns:saveCreditCardDetails" />
+      <xs:element name="saveCreditCardDetailsResponse" type="tns:saveCreditCardDetailsResponse" />
+      <xs:element name="updateAccountDetails" type="tns:updateAccountDetails" />
+      <xs:element name="updateAccountDetailsResponse" type="tns:updateAccountDetailsResponse" />
+      <xs:element name="updateCreditCardDetails" type="tns:updateCreditCardDetails" />
+      <xs:element name="updateCreditCardDetailsResponse" type="tns:updateCreditCardDetailsResponse" />
+      <xs:element name="updateGeneralPreferences" type="tns:updateGeneralPreferences" />
+      <xs:element name="updateGeneralPreferencesResponse" type="tns:updateGeneralPreferencesResponse" />
+      <xs:element name="updateRaceBetPref" type="tns:updateRaceBetPref" />
+      <xs:element name="updateRaceBetPrefResponse" type="tns:updateRaceBetPrefResponse" />
+      <xs:element name="validateAccount" type="tns:validateAccount" />
+      <xs:element name="validateAccountResponse" type="tns:validateAccountResponse" />
+      <xs:element name="validateCloseAccount" type="tns:validateCloseAccount" />
+      <xs:element name="validateCloseAccountResponse" type="tns:validateCloseAccountResponse" />
+      <xs:element name="validateCustomerName" type="tns:validateCustomerName" />
+      <xs:element name="validateCustomerNameResponse" type="tns:validateCustomerNameResponse" />
+      <xs:element name="validatePromoCode" type="tns:validatePromoCode" />
+      <xs:element name="validatePromoCodeResponse" type="tns:validatePromoCodeResponse" />
+      <xs:element name="verifyPCLLimit" type="tns:verifyPCLLimit" />
+      <xs:element name="verifyPCLLimitResponse" type="tns:verifyPCLLimitResponse" />
+      <xs:element name="withdrawFunds" type="tns:withdrawFunds" />
+      <xs:element name="withdrawFundsResponse" type="tns:withdrawFundsResponse" />
+      <xs:complexType name="initPoliTransaction">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="arg0" type="tns:apiMeta" />
+          <xs:element minOccurs="0" name="arg1" type="tns:initiateTransactionRequest" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="apiMeta">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="deviceId" type="xs:long" />
+          <xs:element name="jurisdictionId" type="xs:long" />
+          <xs:element minOccurs="0" name="requestChannel" type="xs:long" />
+          <xs:element minOccurs="0" name="usernamePasswordToken" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="initiateTransactionRequest">
+        <xs:complexContent mixed="false">
+          <xs:extension base="tns:request">
+            <xs:sequence>
+              <xs:element minOccurs="0" name="currencyAmount" type="xs:decimal" />
+              <xs:element minOccurs="0" name="currencyCode" type="xs:string" />
+              <xs:element minOccurs="0" name="merchantCheckoutURL" type="xs:string" />
+              <xs:element minOccurs="0" name="merchantCode" type="xs:string" />
+              <xs:element minOccurs="0" name="merchantData" type="xs:string" />
+              <xs:element minOccurs="0" name="merchantDateTime" type="xs:dateTime" />
+              <xs:element minOccurs="0" name="merchantHomePageURL" type="xs:string" />
+              <xs:element minOccurs="0" name="merchantRef" type="xs:string" />
+              <xs:element minOccurs="0" name="merchantReferenceFormat" type="xs:string" />
+              <xs:element minOccurs="0" name="notificationURL" type="xs:string" />
+              <xs:element minOccurs="0" name="selectedFICode" type="xs:string" />
+              <xs:element minOccurs="0" name="successfulURL" type="xs:string" />
+              <xs:element name="timeout" type="xs:int" />
+              <xs:element minOccurs="0" name="unsuccessfulURL" type="xs:string" />
+              <xs:element minOccurs="0" name="userIPAddress" type="xs:string" />
+            </xs:sequence>
+          </xs:extension>
+        </xs:complexContent>
+      </xs:complexType>
+      <xs:complexType name="request" abstract="true">
+        <xs:sequence />
+      </xs:complexType>
+      <xs:complexType name="initPoliTransactionResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="return" type="tns:initiateTransactionResponse" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="initiateTransactionResponse">
+        <xs:complexContent mixed="false">
+          <xs:extension base="tns:request">
+            <xs:sequence>
+              <xs:element minOccurs="0" name="navigateURL" type="xs:string" />
+              <xs:element minOccurs="0" name="transactionRefNo" type="xs:string" />
+              <xs:element minOccurs="0" name="transactionStatusCode" type="xs:string" />
+              <xs:element minOccurs="0" name="transactionToken" type="xs:string" />
+            </xs:sequence>
+          </xs:extension>
+        </xs:complexContent>
+      </xs:complexType>
+      <xs:complexType name="updateAccountDetails">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="request" type="tns:apiMeta" />
+          <xs:element minOccurs="0" name="updateAccountDetailsRequest" type="tns:updateAccountDetailsRequest" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="updateAccountDetailsRequest">
+        <xs:complexContent mixed="false">
+          <xs:extension base="tns:request">
+            <xs:sequence>
+              <xs:element minOccurs="0" name="acceptPartial" type="xs:int" />
+              <xs:element name="acceptReducedOdds" type="xs:boolean" />
+              <xs:element name="accountPin" type="xs:long" />
+              <xs:element minOccurs="0" name="affiliateBetType" type="xs:string" />
+              <xs:element minOccurs="0" name="affiliateChannel" type="xs:string" />
+              <xs:element minOccurs="0" name="affiliateCode" type="xs:string" />
+              <xs:element minOccurs="0" name="brandingTheme" type="xs:string" />
+              <xs:element minOccurs="0" name="challengeAnswer" type="xs:string" />
+              <xs:element minOccurs="0" name="challengeQuestion" type="xs:string" />
+              <xs:element minOccurs="0" name="creditCardCheckValue" type="xs:string" />
+              <xs:element minOccurs="0" name="creditCardExpiryDate" type="xs:dateTime" />
+              <xs:element minOccurs="0" name="creditCardNumber" type="xs:string" />
+              <xs:element name="creditCardType" type="xs:int" />
+              <xs:element minOccurs="0" name="currencyCode" type="xs:string" />
+              <xs:element name="currencyConversion" type="xs:boolean" />
+              <xs:element minOccurs="0" name="dateOfBirth" type="xs:dateTime" />
+              <xs:element name="defAccountPeriod" type="xs:int" />
+              <xs:element minOccurs="0" name="defAccountStatement" type="xs:string" />
+              <xs:element minOccurs="0" name="defHomepage" type="xs:string" />
+              <xs:element name="defRacingBetting" type="xs:boolean" />
+              <xs:element name="defaultBatchViewerDisplay" type="xs:boolean" />
+              <xs:element minOccurs="0" name="defaultBetType" type="xs:string" />
+              <xs:element minOccurs="0" name="defaultExpressMode" type="xs:string" />
+              <xs:element name="defaultMarketMoversDisplay" type="xs:boolean" />
+              <xs:element minOccurs="0" name="defaultRaceCode" type="xs:string" />
+              <xs:element name="defaultSportMarket" type="xs:boolean" />
+              <xs:element name="dispContextualHelp" type="xs:boolean" />
+              <xs:element minOccurs="0" name="emailId" type="xs:string" />
+              <xs:element name="emailStatement" type="xs:boolean" />
+              <xs:element minOccurs="0" name="firstName" type="xs:string" />
+              <xs:element name="flexiBetEnabled" type="xs:boolean" />
+              <xs:element name="gamblingProhibitedTAC" type="xs:boolean" />
+              <xs:element minOccurs="0" name="gender" type="xs:string" />
+              <xs:element minOccurs="0" name="homeAddressNo" type="xs:string" />
+              <xs:element name="homeCountry" type="xs:int" />
+              <xs:element minOccurs="0" name="homePhoneNo" type="xs:string" />
+              <xs:element minOccurs="0" name="homePostCode" type="xs:string" />
+              <xs:element name="homeState" type="xs:int" />
+              <xs:element minOccurs="0" name="homeStreet" type="xs:string" />
+              <xs:element minOccurs="0" name="homeSuburb" type="xs:string" />
+              <xs:element minOccurs="0" name="homeprovince" type="xs:string" />
+              <xs:element name="initialDeposit" type="xs:double" />
+              <xs:element name="internetBettingTAC" type="xs:boolean" />
+              <xs:element minOccurs="0" name="ipAddress" type="xs:string" />
+              <xs:element minOccurs="0" name="language" type="xs:string" />
+              <xs:element minOccurs="0" name="lastName" type="xs:string" />
+              <xs:element name="maximumBetCost" type="xs:double" />
+              <xs:element minOccurs="0" name="maximumDepositLimit" type="xs:double" />
+              <xs:element minOccurs="0" name="mobileNo" type="xs:string" />
+              <xs:element minOccurs="0" name="nameOnCreditCard" type="xs:string" />
+              <xs:element minOccurs="0" name="notifyAddress" type="xs:string" />
+              <xs:element minOccurs="0" name="notifyFormat" type="xs:string" />
+              <xs:element name="notifyMethod" type="xs:int" />
+              <xs:element name="paginationSelect" type="xs:boolean" />
+              <xs:element name="partnerpromo" type="xs:boolean" />
+              <xs:element name="paymentMethod" type="xs:int" />
+              <xs:element minOccurs="0" name="postAddressNo" type="xs:string" />
+              <xs:element name="postCountry" type="xs:int" />
+              <xs:element minOccurs="0" name="postPostCode" type="xs:string" />
+              <xs:element name="postState" type="xs:int" />
+              <xs:element minOccurs="0" name="postStreet" type="xs:string" />
+              <xs:element minOccurs="0" name="postSuburb" type="xs:string" />
+              <xs:element minOccurs="0" name="postprovince" type="xs:string" />
+              <xs:element minOccurs="0" name="promoCode" type="xs:string" />
+              <xs:element minOccurs="0" name="referral" type="xs:string" />
+              <xs:element name="tabpromo" type="xs:boolean" />
+              <xs:element minOccurs="0" name="tier" type="xs:string" />
+              <xs:element minOccurs="0" name="timeZone" type="tns:timeZoneEnum" />
+              <xs:element name="title" type="xs:int" />
+              <xs:element name="weeklyDepositLimit" type="xs:double" />
+              <xs:element minOccurs="0" name="workPhoneNo" type="xs:string" />
+            </xs:sequence>
+          </xs:extension>
+        </xs:complexContent>
+      </xs:complexType>
+      <xs:complexType name="updateAccountDetailsResponse">
+        <xs:sequence>
+          <xs:element name="return" type="xs:boolean" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="createAccount">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="request" type="tns:apiMeta" />
+          <xs:element minOccurs="0" name="createAccountRequest" type="tns:createAccountRequest" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="createAccountRequest">
+        <xs:complexContent mixed="false">
+          <xs:extension base="tns:request">
+            <xs:sequence>
+              <xs:element minOccurs="0" name="accountPassword" type="xs:string" />
+              <xs:element name="accountPin" type="xs:long" />
+              <xs:element minOccurs="0" name="affiliateCode" type="xs:string" />
+              <xs:element minOccurs="0" name="authVerificationValue" type="xs:string" />
+              <xs:element minOccurs="0" name="authorizationFlag" type="xs:string" />
+              <xs:element minOccurs="0" name="challengeAnswer" type="xs:string" />
+              <xs:element minOccurs="0" name="challengeQuestion" type="xs:string" />
+              <xs:element minOccurs="0" name="contactType" type="xs:string" />
+              <xs:element minOccurs="0" name="creditCardCheckValue" type="xs:string" />
+              <xs:element minOccurs="0" name="creditCardExpiryDate" type="xs:string" />
+              <xs:element minOccurs="0" name="creditCardNumber" type="xs:string" />
+              <xs:element name="creditCardType" type="xs:int" />
+              <xs:element minOccurs="0" name="currencyCode" type="xs:string" />
+              <xs:element minOccurs="0" name="dateOfBirth" type="xs:dateTime" />
+              <xs:element minOccurs="0" name="dobInString" type="xs:string" />
+              <xs:element minOccurs="0" name="emailId" type="xs:string" />
+              <xs:element minOccurs="0" name="enrolmentFlag" type="xs:string" />
+              <xs:element minOccurs="0" name="firstName" type="xs:string" />
+              <xs:element name="gamblingProhibitedTAC" type="xs:boolean" />
+              <xs:element minOccurs="0" name="gender" type="xs:string" />
+              <xs:element minOccurs="0" name="homeAddressNo" type="xs:string" />
+              <xs:element name="homeCountry" type="xs:int" />
+              <xs:element minOccurs="0" name="homePhoneNo" type="xs:string" />
+              <xs:element minOccurs="0" name="homePostCode" type="xs:string" />
+              <xs:element name="homeState" type="xs:int" />
+              <xs:element minOccurs="0" name="homeStreet" type="xs:string" />
+              <xs:element minOccurs="0" name="homeSuburb" type="xs:string" />
+              <xs:element minOccurs="0" name="homeprovince" type="xs:string" />
+              <xs:element name="initialDeposit" type="xs:double" />
+              <xs:element name="internetBettingTAC" type="xs:boolean" />
+              <xs:element minOccurs="0" name="ipAddress" type="xs:string" />
+              <xs:element name="jurisdictionId" type="xs:long" />
+              <xs:element minOccurs="0" name="language" type="xs:string" />
+              <xs:element minOccurs="0" name="lastName" type="xs:string" />
+              <xs:element minOccurs="0" name="maskedCreditCardNumber" type="xs:string" />
+              <xs:element minOccurs="0" name="maximumDepositLimit" type="xs:double" />
+              <xs:element minOccurs="0" name="mobileNo" type="xs:string" />
+              <xs:element minOccurs="0" name="nameOnCreditCard" type="xs:string" />
+              <xs:element name="partnerpromo" type="xs:boolean" />
+              <xs:element minOccurs="0" name="payerAuthResponse" type="xs:string" />
+              <xs:element name="paymentMethod" type="xs:int" />
+              <xs:element minOccurs="0" name="postAddressNo" type="xs:string" />
+              <xs:element name="postCountry" type="xs:int" />
+              <xs:element minOccurs="0" name="postPostCode" type="xs:string" />
+              <xs:element name="postState" type="xs:int" />
+              <xs:element minOccurs="0" name="postStreet" type="xs:string" />
+              <xs:element minOccurs="0" name="postSuburb" type="xs:string" />
+              <xs:element minOccurs="0" name="postprovince" type="xs:string" />
+              <xs:element minOccurs="0" name="promoCode" type="xs:string" />
+              <xs:element minOccurs="0" name="secureId" type="xs:string" />
+              <xs:element minOccurs="0" name="securityIndicator" type="xs:string" />
+              <xs:element name="tabpromo" type="xs:boolean" />
+              <xs:element minOccurs="0" name="timeZone" type="tns:timeZoneEnum" />
+              <xs:element name="title" type="xs:int" />
+              <xs:element minOccurs="0" name="tokenId" type="xs:string" />
+              <xs:element minOccurs="0" name="transactionId" type="xs:string" />
+              <xs:element minOccurs="0" name="workPhoneNo" type="xs:string" />
+            </xs:sequence>
+          </xs:extension>
+        </xs:complexContent>
+      </xs:complexType>
+      <xs:complexType name="createAccountResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="return" type="tns:CreateAccountResponseImpl" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="CreateAccountResponseImpl">
+        <xs:complexContent mixed="false">
+          <xs:extension base="tns:response">
+            <xs:sequence>
+              <xs:element name="accountBalance" type="xs:double" />
+              <xs:element name="accountId" type="xs:long" />
+              <xs:element minOccurs="0" name="accountIdDescription" type="xs:string" />
+              <xs:element name="accountIdVerified" type="xs:boolean" />
+              <xs:element name="amountWithdraw" type="xs:double" />
+              <xs:element minOccurs="0" name="balancePayNumber" type="xs:string" />
+              <xs:element name="conversionRate" type="xs:double" />
+              <xs:element minOccurs="0" name="redemptionResp" type="xs:string" />
+              <xs:element name="transactionNumber" type="xs:long" />
+              <xs:element minOccurs="0" name="transactionTime" type="xs:dateTime" />
+            </xs:sequence>
+          </xs:extension>
+        </xs:complexContent>
+      </xs:complexType>
+      <xs:complexType name="response" abstract="true">
+        <xs:sequence />
+      </xs:complexType>
+      <xs:complexType name="registerCreditCard">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="request" type="tns:apiMeta" />
+          <xs:element minOccurs="0" name="registerCreditCardRequest" type="tns:registerCreditCardRequest" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="registerCreditCardRequest">
+        <xs:complexContent mixed="false">
+          <xs:extension base="tns:request">
+            <xs:sequence>
+              <xs:element minOccurs="0" name="accountPin" type="xs:long" />
+              <xs:element name="creditCardType" type="xs:int" />
+              <xs:element minOccurs="0" name="maskedCreditCardNumber" type="xs:string" />
+              <xs:element minOccurs="0" name="nameOnCreditCard" type="xs:string" />
+              <xs:element minOccurs="0" name="tokenId" type="xs:string" />
+            </xs:sequence>
+          </xs:extension>
+        </xs:complexContent>
+      </xs:complexType>
+      <xs:complexType name="registerCreditCardResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="return" type="tns:RegisterCreditCardResp" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="RegisterCreditCardResp">
+        <xs:complexContent mixed="false">
+          <xs:extension base="tns:response">
+            <xs:sequence>
+              <xs:element minOccurs="0" name="creditCardRegisterTime" type="xs:dateTime" />
+              <xs:element minOccurs="0" name="maskedCreditCardNumber" type="xs:string" />
+            </xs:sequence>
+          </xs:extension>
+        </xs:complexContent>
+      </xs:complexType>
+      <xs:complexType name="getAvailablePromotions">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="apiMeta" type="tns:apiMeta" />
+          <xs:element minOccurs="0" name="availablePromotionRequest" type="tns:availablePromotionRequest" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="availablePromotionRequest">
+        <xs:complexContent mixed="false">
+          <xs:extension base="tns:request">
+            <xs:sequence>
+              <xs:element name="country" type="xs:int" />
+              <xs:element name="state" type="xs:int" />
+            </xs:sequence>
+          </xs:extension>
+        </xs:complexContent>
+      </xs:complexType>
+      <xs:complexType name="getAvailablePromotionsResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="return" type="tns:availablePromotionResponse" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="availablePromotionResponse">
+        <xs:complexContent mixed="false">
+          <xs:extension base="tns:response">
+            <xs:sequence>
+              <xs:element minOccurs="0" maxOccurs="unbounded" name="availablePromotion" nillable="true" type="tns:availablePromotion" />
+            </xs:sequence>
+          </xs:extension>
+        </xs:complexContent>
+      </xs:complexType>
+      <xs:complexType name="availablePromotion">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="accountInstanceId" type="xs:string" />
+          <xs:element minOccurs="0" name="affiliateCode" type="xs:string" />
+          <xs:element minOccurs="0" name="amount" type="xs:double" />
+          <xs:element minOccurs="0" name="amountTier0" type="xs:double" />
+          <xs:element minOccurs="0" name="amountTier1" type="xs:double" />
+          <xs:element minOccurs="0" name="amountTier2" type="xs:double" />
+          <xs:element minOccurs="0" name="amountTier3" type="xs:double" />
+          <xs:element minOccurs="0" name="applicableTo" type="xs:string" />
+          <xs:element minOccurs="0" name="noOfCustomerRedeem" type="xs:int" />
+          <xs:element minOccurs="0" name="promotionCode" type="xs:string" />
+          <xs:element minOccurs="0" name="promotionCodeId" type="xs:long" />
+          <xs:element minOccurs="0" name="promotionDescription" type="xs:string" />
+          <xs:element minOccurs="0" name="promotionLevel" type="xs:string" />
+          <xs:element minOccurs="0" name="promotionType" type="xs:string" />
+          <xs:element name="redeemAllowed" type="xs:boolean" />
+          <xs:element minOccurs="0" name="status" type="xs:string" />
+          <xs:element minOccurs="0" name="termsAndConditions" type="xs:string" />
+          <xs:element minOccurs="0" name="validFrom" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="validTo" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="validToInString" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="getChallengeQuestion">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="request" type="tns:apiMeta" />
+          <xs:element minOccurs="0" name="challengeQuestionRequest" type="tns:challengeQuestionRequest" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="challengeQuestionRequest">
+        <xs:complexContent mixed="false">
+          <xs:extension base="tns:request">
+            <xs:sequence>
+              <xs:element name="accountId" type="xs:long" />
+              <xs:element name="accountPin" type="xs:long" />
+              <xs:element minOccurs="0" name="lastName" type="xs:string" />
+            </xs:sequence>
+          </xs:extension>
+        </xs:complexContent>
+      </xs:complexType>
+      <xs:complexType name="getChallengeQuestionResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="return" type="tns:challengeQuestionResponse" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="challengeQuestionResponse">
+        <xs:complexContent mixed="false">
+          <xs:extension base="tns:response">
+            <xs:sequence>
+              <xs:element name="accountId" type="xs:long" />
+              <xs:element minOccurs="0" name="challengeQuestion" type="xs:string" />
+            </xs:sequence>
+          </xs:extension>
+        </xs:complexContent>
+      </xs:complexType>
+      <xs:complexType name="updateGeneralPreferences">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="request" type="tns:apiMeta" />
+          <xs:element minOccurs="0" name="updateGeneralPrefRequest" type="tns:updateGeneralPreferencesRequest" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="updateGeneralPreferencesRequest">
+        <xs:complexContent mixed="false">
+          <xs:extension base="tns:preferenceRequest">
+            <xs:sequence>
+              <xs:element name="acceptReducedOdds" type="xs:boolean" />
+              <xs:element name="accountPin" type="xs:long" />
+              <xs:element minOccurs="0" name="accountStmtBetType" type="xs:string" />
+              <xs:element minOccurs="0" name="accountStmtChannel" type="xs:string" />
+              <xs:element minOccurs="0" name="brandingTheme" type="xs:string" />
+              <xs:element name="counterOfferAmount" type="xs:boolean" />
+              <xs:element name="counterOfferPrice" type="xs:boolean" />
+              <xs:element minOccurs="0" name="currencyCode" type="xs:string" />
+              <xs:element name="currencyConversion" type="xs:boolean" />
+              <xs:element name="defAccountPeriod" type="xs:int" />
+              <xs:element minOccurs="0" name="defAccountStatement" type="xs:string" />
+              <xs:element minOccurs="0" name="defaultAccPeriod" type="xs:string" />
+              <xs:element name="dispContextualHelp" type="xs:boolean" />
+              <xs:element name="dispContextualHelpUpdated" type="xs:boolean" />
+              <xs:element minOccurs="0" name="emailStatementSpend" type="xs:string" />
+              <xs:element minOccurs="0" name="language" type="xs:string" />
+              <xs:element minOccurs="0" name="maximumDepositLimit" type="xs:double" />
+              <xs:element name="monthlyEmailStatement" type="xs:boolean" />
+              <xs:element name="notifyMethod" type="xs:int" />
+              <xs:element name="paginationSelect" type="xs:boolean" />
+              <xs:element name="receiveEmailStatementFixedOdds" type="xs:boolean" />
+              <xs:element name="receiveEmailStatementPari" type="xs:boolean" />
+              <xs:element name="receiveEmailStatementPeriod" type="xs:boolean" />
+              <xs:element name="receiveEmailStatementSummary" type="xs:boolean" />
+              <xs:element minOccurs="0" name="timeZone" type="xs:string" />
+            </xs:sequence>
+          </xs:extension>
+        </xs:complexContent>
+      </xs:complexType>
+      <xs:complexType name="preferenceRequest">
+        <xs:complexContent mixed="false">
+          <xs:extension base="tns:request">
+            <xs:sequence>
+              <xs:element name="accountId" type="xs:long" />
+              <xs:element name="defaultSportMarket" type="xs:boolean" />
+            </xs:sequence>
+          </xs:extension>
+        </xs:complexContent>
+      </xs:complexType>
+      <xs:complexType name="updateGeneralPreferencesResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="return" type="tns:UpdateGeneralPreferencesImpl" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="UpdateGeneralPreferencesImpl">
+        <xs:complexContent mixed="false">
+          <xs:extension base="tns:response">
+            <xs:sequence>
+              <xs:element minOccurs="0" name="conversionRate" type="xs:double" />
+              <xs:element name="timezoneOffset" type="xs:double" />
+            </xs:sequence>
+          </xs:extension>
+        </xs:complexContent>
+      </xs:complexType>
+      <xs:complexType name="depositFundsPOLi">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="request" type="tns:apiMeta" />
+          <xs:element minOccurs="0" name="depositFundsRequest" type="tns:depositFundsPOLiRequest" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="depositFundsPOLiRequest">
+        <xs:complexContent mixed="false">
+          <xs:extension base="tns:request">
+            <xs:sequence>
+              <xs:element minOccurs="0" name="depositAmount" type="xs:double" />
+              <xs:element minOccurs="0" name="paymentMethod" type="xs:int" />
+              <xs:element minOccurs="0" name="poliMerchantRefdata" type="xs:string" />
+              <xs:element minOccurs="0" name="transactionRefNo" type="xs:string" />
+              <xs:element minOccurs="0" name="transactionToken" type="xs:string" />
+            </xs:sequence>
+          </xs:extension>
+        </xs:complexContent>
+      </xs:complexType>
+      <xs:complexType name="depositFundsPOLiResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="return" type="tns:DepositFundsPOLiResponseImpl" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="DepositFundsPOLiResponseImpl">
+        <xs:complexContent mixed="false">
+          <xs:extension base="tns:DepositFundsResponseImpl">
+            <xs:sequence>
+              <xs:element minOccurs="0" name="financialInstitutionName" type="xs:string" />
+              <xs:element minOccurs="0" name="poliBankReceipt" type="xs:string" />
+              <xs:element minOccurs="0" name="poliTXRefNumber" type="xs:long" />
+              <xs:element minOccurs="0" name="poliTXStatusCode" type="xs:long" />
+            </xs:sequence>
+          </xs:extension>
+        </xs:complexContent>
+      </xs:complexType>
+      <xs:complexType name="DepositFundsResponseImpl">
+        <xs:complexContent mixed="false">
+          <xs:extension base="tns:response">
+            <xs:sequence>
+              <xs:element minOccurs="0" name="accountBalance" type="xs:double" />
+              <xs:element minOccurs="0" name="depositAmount" type="xs:double" />
+              <xs:element minOccurs="0" name="minDepositAmount" type="xs:double" />
+              <xs:element minOccurs="0" name="transactionDate" type="xs:dateTime" />
+              <xs:element minOccurs="0" name="transactionNumber" type="xs:string" />
+            </xs:sequence>
+          </xs:extension>
+        </xs:complexContent>
+      </xs:complexType>
+      <xs:complexType name="getAccountStatement">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="request" type="tns:apiMeta" />
+          <xs:element minOccurs="0" name="accountStatementRequest" type="tns:accountStatementRequest" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="accountStatementRequest">
+        <xs:complexContent mixed="false">
+          <xs:extension base="tns:request">
+            <xs:sequence>
+              <xs:element name="betStatus" type="xs:int" />
+              <xs:element name="channelTypeId" type="xs:int" />
+              <xs:element minOccurs="0" name="componentReference" type="xs:long" />
+              <xs:element minOccurs="0" name="currencyCode" type="xs:string" />
+              <xs:element minOccurs="0" name="distChannel" type="xs:int" />
+              <xs:element minOccurs="0" name="fromDateAsString" type="xs:string" />
+              <xs:element minOccurs="0" name="internetChannel" type="xs:long" />
+              <xs:element name="numberOfRows" type="xs:int" />
+              <xs:element name="statementType" type="xs:int" />
+              <xs:element minOccurs="0" name="toDateAsString" type="xs:string" />
+              <xs:element name="traceDirection" type="xs:boolean" />
+              <xs:element minOccurs="0" name="transactionReference" type="xs:string" />
+            </xs:sequence>
+          </xs:extension>
+        </xs:complexContent>
+      </xs:complexType>
+      <xs:complexType name="getAccountStatementResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="return" type="tns:accountStatementResponse" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="accountStatementResponse">
+        <xs:complexContent mixed="false">
+          <xs:extension base="tns:response">
+            <xs:sequence>
+              <xs:element minOccurs="0" maxOccurs="unbounded" name="statementList" nillable="true" type="tns:AccountStatementImpl" />
+              <xs:element minOccurs="0" name="totalCredit" type="xs:double" />
+              <xs:element minOccurs="0" name="totalDebit" type="xs:double" />
+            </xs:sequence>
+          </xs:extension>
+        </xs:complexContent>
+      </xs:complexType>
+      <xs:complexType name="AccountStatementImpl">
+        <xs:sequence>
+          <xs:element name="balanceAccount" type="xs:double" />
+          <xs:element name="baseInvestmentAmount" type="xs:double" />
+          <xs:element minOccurs="0" name="betTypeDetails" type="xs:string" />
+          <xs:element minOccurs="0" name="componentReference" type="xs:long" />
+          <xs:element name="creditAmount" type="xs:double" />
+          <xs:element name="debitAmount" type="xs:double" />
+          <xs:element minOccurs="0" name="deviceId" type="xs:string" />
+          <xs:element minOccurs="0" name="distChannel" type="xs:int" />
+          <xs:element minOccurs="0" name="eventName" type="xs:string" />
+          <xs:element minOccurs="0" name="meetingDate" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="meetingName" type="xs:string" />
+          <xs:element name="oddsAmount" type="xs:double" />
+          <xs:element minOccurs="0" name="propId" type="xs:string" />
+          <xs:element name="returnsAmount" type="xs:double" />
+          <xs:element minOccurs="0" name="selectionDescription" type="xs:string" />
+          <xs:element name="statementType" type="xs:int" />
+          <xs:element minOccurs="0" name="status" type="xs:string" />
+          <xs:element minOccurs="0" name="transactionDateTime" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="transactionReference" type="xs:string" />
+          <xs:element minOccurs="0" name="meetingCode" type="xs:string" />
+          <xs:element minOccurs="0" name="mDate" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="checkCreditCardEnrolment">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="arg0" type="tns:apiMeta" />
+          <xs:element minOccurs="0" name="arg1" type="tns:checkCreditCardEnrolmentRequest" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="checkCreditCardEnrolmentRequest">
+        <xs:complexContent mixed="false">
+          <xs:extension base="tns:request">
+            <xs:sequence>
+              <xs:element minOccurs="0" name="depositAmount" type="xs:double" />
+              <xs:element minOccurs="0" name="responseUrl" type="xs:string" />
+              <xs:element minOccurs="0" name="secureId" type="xs:string" />
+              <xs:element minOccurs="0" name="tokenId" type="xs:string" />
+            </xs:sequence>
+          </xs:extension>
+        </xs:complexContent>
+      </xs:complexType>
+      <xs:complexType name="checkCreditCardEnrolmentResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="return" type="tns:CheckCreditCardEnrolmentResp" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="CheckCreditCardEnrolmentResp">
+        <xs:complexContent mixed="false">
+          <xs:extension base="tns:response">
+            <xs:sequence>
+              <xs:element minOccurs="0" name="bankUrl" type="xs:string" />
+              <xs:element minOccurs="0" name="enrolmentStatus" type="xs:string" />
+              <xs:element minOccurs="0" name="payerAuthRequest" type="xs:string" />
+            </xs:sequence>
+          </xs:extension>
+        </xs:complexContent>
+      </xs:complexType>
+      <xs:complexType name="createPaymentGatewaySession">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="request" type="tns:apiMeta" />
+          <xs:element minOccurs="0" name="createPaymentGatewaySessionRequest" type="tns:createPaymentGatewaySessionRequest" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="createPaymentGatewaySessionRequest">
+        <xs:complexContent mixed="false">
+          <xs:extension base="tns:request">
+            <xs:sequence>
+              <xs:element minOccurs="0" name="transactionType" type="xs:string" />
+            </xs:sequence>
+          </xs:extension>
+        </xs:complexContent>
+      </xs:complexType>
+      <xs:complexType name="createPaymentGatewaySessionResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="return" type="tns:CreatePaymentGatewaySessionResp" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="CreatePaymentGatewaySessionResp">
+        <xs:complexContent mixed="false">
+          <xs:extension base="tns:response">
+            <xs:sequence>
+              <xs:element minOccurs="0" name="sessionId" type="xs:string" />
+            </xs:sequence>
+          </xs:extension>
+        </xs:complexContent>
+      </xs:complexType>
+      <xs:complexType name="getPromoAndBBCount">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="request" type="tns:apiMeta" />
+          <xs:element minOccurs="0" name="getPromotionCodeReq" type="tns:promoAndBBCountReq" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="promoAndBBCountReq">
+        <xs:complexContent mixed="false">
+          <xs:extension base="tns:request">
+            <xs:sequence>
+              <xs:element name="country" type="xs:int" />
+              <xs:element name="state" type="xs:int" />
+            </xs:sequence>
+          </xs:extension>
+        </xs:complexContent>
+      </xs:complexType>
+      <xs:complexType name="getPromoAndBBCountResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="return" type="tns:promoAndBBCountResp" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="promoAndBBCountResp">
+        <xs:complexContent mixed="false">
+          <xs:extension base="tns:response">
+            <xs:sequence>
+              <xs:element name="bbCount" type="xs:int" />
+              <xs:element name="promoCodeCount" type="xs:int" />
+            </xs:sequence>
+          </xs:extension>
+        </xs:complexContent>
+      </xs:complexType>
+      <xs:complexType name="getPoliTransaction">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="arg0" type="tns:apiMeta" />
+          <xs:element minOccurs="0" name="arg1" type="tns:getPoliTransactionRequest" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="getPoliTransactionRequest">
+        <xs:complexContent mixed="false">
+          <xs:extension base="tns:request">
+            <xs:sequence>
+              <xs:element minOccurs="0" name="transactionToken" type="xs:string" />
+            </xs:sequence>
+          </xs:extension>
+        </xs:complexContent>
+      </xs:complexType>
+      <xs:complexType name="getPoliTransactionResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="return" type="tns:GetPoliTransactionResponseImpl" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="GetPoliTransactionResponseImpl">
+        <xs:complexContent mixed="false">
+          <xs:extension base="tns:response">
+            <xs:sequence>
+              <xs:element minOccurs="0" name="amountPaid" type="xs:double" />
+              <xs:element minOccurs="0" name="bankReceipt" type="xs:string" />
+              <xs:element minOccurs="0" name="bankReceiptDateTime" type="xs:string" />
+              <xs:element minOccurs="0" name="countryCode" type="xs:string" />
+              <xs:element minOccurs="0" name="countryName" type="xs:string" />
+              <xs:element minOccurs="0" name="currencyCode" type="xs:string" />
+              <xs:element minOccurs="0" name="currencyName" type="xs:string" />
+              <xs:element minOccurs="0" name="endDateTime" type="xs:dateTime" />
+              <xs:element minOccurs="0" name="errorCode" type="xs:string" />
+              <xs:element minOccurs="0" name="errorMessage" type="xs:string" />
+              <xs:element minOccurs="0" name="establishedDateTime" type="xs:dateTime" />
+              <xs:element minOccurs="0" name="financialInstitutionCode" type="xs:string" />
+              <xs:element minOccurs="0" name="financialInstitutionCountryCode" type="xs:string" />
+              <xs:element minOccurs="0" name="financialInstitutionName" type="xs:string" />
+              <xs:element minOccurs="0" name="merchantAcctName" type="xs:string" />
+              <xs:element minOccurs="0" name="merchantAcctNumber" type="xs:string" />
+              <xs:element minOccurs="0" name="merchantAcctSortCode" type="xs:string" />
+              <xs:element minOccurs="0" name="merchantAcctSuffix" type="xs:string" />
+              <xs:element minOccurs="0" name="merchantDefinedData" type="xs:string" />
+              <xs:element minOccurs="0" name="merchantEstablishedDateTime" type="xs:dateTime" />
+              <xs:element minOccurs="0" name="merchantReference" type="xs:string" />
+              <xs:element minOccurs="0" name="paymentAmount" type="xs:double" />
+              <xs:element minOccurs="0" name="startDateTime" type="xs:dateTime" />
+              <xs:element minOccurs="0" name="transactionRefNo" type="xs:string" />
+              <xs:element minOccurs="0" name="transactionStatusCode" type="xs:string" />
+            </xs:sequence>
+          </xs:extension>
+        </xs:complexContent>
+      </xs:complexType>
+      <xs:complexType name="changePassword">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="request" type="tns:apiMeta" />
+          <xs:element minOccurs="0" name="changePasswordRequest" type="tns:changePasswordRequest" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="changePasswordRequest">
+        <xs:complexContent mixed="false">
+          <xs:extension base="tns:request">
+            <xs:sequence>
+              <xs:element name="accountId" type="xs:long" />
+              <xs:element minOccurs="0" name="accountPassword" type="xs:string" />
+              <xs:element minOccurs="0" name="accountPasswordNew" type="xs:string" />
+              <xs:element minOccurs="0" name="challengeAnswer" type="xs:string" />
+              <xs:element minOccurs="0" name="challengeQuestion" type="xs:string" />
+            </xs:sequence>
+          </xs:extension>
+        </xs:complexContent>
+      </xs:complexType>
+      <xs:complexType name="changePasswordResponse">
+        <xs:sequence>
+          <xs:element name="return" type="xs:boolean" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="getCurrencyConversionRate">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="request" type="tns:apiMeta" />
+          <xs:element minOccurs="0" name="currencyConversionRequest" type="tns:currencyConversionRequest" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="currencyConversionRequest">
+        <xs:complexContent mixed="false">
+          <xs:extension base="tns:request">
+            <xs:sequence>
+              <xs:element minOccurs="0" name="currencyCode" type="xs:string" />
+            </xs:sequence>
+          </xs:extension>
+        </xs:complexContent>
+      </xs:complexType>
+      <xs:complexType name="getCurrencyConversionRateResponse">
+        <xs:sequence>
+          <xs:element name="return" type="xs:double" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="getAccountBalance">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="request" type="tns:apiMeta" />
+          <xs:element minOccurs="0" name="accountBalanceRequest" type="tns:accountBalanceRequest" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="accountBalanceRequest">
+        <xs:complexContent mixed="false">
+          <xs:extension base="tns:request">
+            <xs:sequence />
+          </xs:extension>
+        </xs:complexContent>
+      </xs:complexType>
+      <xs:complexType name="getAccountBalanceResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="return" type="tns:accountBalanceResponse" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="accountBalanceResponse">
+        <xs:complexContent mixed="false">
+          <xs:extension base="tns:response">
+            <xs:sequence>
+              <xs:element minOccurs="0" name="accountBalance" type="xs:double" />
+              <xs:element minOccurs="0" name="amountWithdraw" type="xs:double" />
+              <xs:element minOccurs="0" name="conversionRate" type="xs:double" />
+              <xs:element minOccurs="0" name="customerId" type="xs:int" />
+              <xs:element minOccurs="0" name="minDepositAmount" type="xs:double" />
+            </xs:sequence>
+          </xs:extension>
+        </xs:complexContent>
+      </xs:complexType>
+      <xs:complexType name="withdrawFunds">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="request" type="tns:apiMeta" />
+          <xs:element minOccurs="0" name="withdrawFundsRequest" type="tns:withdrawFundsRequest" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="withdrawFundsRequest">
+        <xs:complexContent mixed="false">
+          <xs:extension base="tns:request">
+            <xs:sequence>
+              <xs:element name="accountId" type="xs:long" />
+              <xs:element minOccurs="0" name="currencyCode" type="xs:string" />
+              <xs:element name="paymentMethod" type="xs:int" />
+              <xs:element name="withdrawalAmount" type="xs:double" />
+            </xs:sequence>
+          </xs:extension>
+        </xs:complexContent>
+      </xs:complexType>
+      <xs:complexType name="withdrawFundsResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="return" type="tns:WithdrawFundsResponseImpl" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="WithdrawFundsResponseImpl">
+        <xs:complexContent mixed="false">
+          <xs:extension base="tns:response">
+            <xs:sequence>
+              <xs:element name="accountBalance" type="xs:double" />
+              <xs:element name="accountId" type="xs:long" />
+              <xs:element name="acntBalanceInPrefCurr" type="xs:double" />
+              <xs:element minOccurs="0" name="transactionDate" type="xs:dateTime" />
+              <xs:element minOccurs="0" name="transactionNumber" type="xs:string" />
+              <xs:element name="withdrawalAmount" type="xs:double" />
+              <xs:element name="withdrawalAmtInPrefCurr" type="xs:double" />
+            </xs:sequence>
+          </xs:extension>
+        </xs:complexContent>
+      </xs:complexType>
+      <xs:complexType name="activateAccount">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="request" type="tns:apiMeta" />
+          <xs:element minOccurs="0" name="activateAccountRequest" type="tns:activateAccountRequest" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="activateAccountRequest">
+        <xs:complexContent mixed="false">
+          <xs:extension base="tns:request">
+            <xs:sequence>
+              <xs:element name="accountId" type="xs:long" />
+              <xs:element minOccurs="0" name="accountPassword" type="xs:string" />
+              <xs:element name="accountPin" type="xs:long" />
+              <xs:element minOccurs="0" name="challengeAnswer" type="xs:string" />
+              <xs:element minOccurs="0" name="challengeQuestion" type="xs:string" />
+              <xs:element minOccurs="0" name="currencyCode" type="xs:string" />
+              <xs:element minOccurs="0" name="emailId" type="xs:string" />
+              <xs:element name="gamblingProhibitedTAC" type="xs:boolean" />
+              <xs:element name="internetBettingTAC" type="xs:boolean" />
+              <xs:element minOccurs="0" name="language" type="xs:string" />
+              <xs:element minOccurs="0" name="lastName" type="xs:string" />
+              <xs:element name="partnerpromo" type="xs:boolean" />
+              <xs:element name="tabpromo" type="xs:boolean" />
+              <xs:element minOccurs="0" name="timeZone" type="xs:string" />
+            </xs:sequence>
+          </xs:extension>
+        </xs:complexContent>
+      </xs:complexType>
+      <xs:complexType name="activateAccountResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="return" type="tns:ActivateAccountResponseImpl" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="ActivateAccountResponseImpl">
+        <xs:complexContent mixed="false">
+          <xs:extension base="tns:response">
+            <xs:sequence>
+              <xs:element name="status" type="xs:boolean" />
+            </xs:sequence>
+          </xs:extension>
+        </xs:complexContent>
+      </xs:complexType>
+      <xs:complexType name="getGeneralAccountPreferences">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="request" type="tns:apiMeta" />
+          <xs:element minOccurs="0" name="generalAccountPreferencesRequest" type="tns:getGeneralAccountPrefRequest" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="getGeneralAccountPrefRequest">
+        <xs:complexContent mixed="false">
+          <xs:extension base="tns:request">
+            <xs:sequence>
+              <xs:element name="accountPin" type="xs:long" />
+            </xs:sequence>
+          </xs:extension>
+        </xs:complexContent>
+      </xs:complexType>
+      <xs:complexType name="getGeneralAccountPreferencesResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="return" type="tns:preferenceResponse" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="preferenceResponse">
+        <xs:complexContent mixed="false">
+          <xs:extension base="tns:response">
+            <xs:sequence>
+              <xs:element minOccurs="0" name="accountId" type="xs:long" />
+              <xs:element minOccurs="0" name="generealPreference" type="tns:generalPreferences" />
+              <xs:element minOccurs="0" name="raceBetPreference" type="tns:raceBetPreference" />
+            </xs:sequence>
+          </xs:extension>
+        </xs:complexContent>
+      </xs:complexType>
+      <xs:complexType name="generalPreferences">
+        <xs:complexContent mixed="false">
+          <xs:extension base="tns:preferenceResponse">
+            <xs:sequence>
+              <xs:element name="acceptReducedOdds" type="xs:boolean" />
+              <xs:element minOccurs="0" name="accountStmtBetType" type="xs:string" />
+              <xs:element minOccurs="0" name="accountStmtChannel" type="xs:string" />
+              <xs:element name="blackBookEligible" type="xs:boolean" />
+              <xs:element name="blackBookEntriesAllowed" type="xs:int" />
+              <xs:element minOccurs="0" name="blackBookSMSNotification" type="xs:boolean" />
+              <xs:element minOccurs="0" name="brandingTheme" type="xs:string" />
+              <xs:element name="counterOfferAmount" type="xs:boolean" />
+              <xs:element name="counterOfferPrice" type="xs:boolean" />
+              <xs:element minOccurs="0" name="currencyCode" type="xs:string" />
+              <xs:element name="currencyConversion" type="xs:boolean" />
+              <xs:element minOccurs="0" name="defAccountPeriod" type="xs:int" />
+              <xs:element minOccurs="0" name="defAccountStatement" type="xs:string" />
+              <xs:element minOccurs="0" name="defaultAccPeriod" type="xs:string" />
+              <xs:element name="dispContextualHelp" type="xs:boolean" />
+              <xs:element name="dispContextualHelpUpdated" type="xs:boolean" />
+              <xs:element minOccurs="0" name="emailStatementSpend" type="xs:string" />
+              <xs:element minOccurs="0" name="language" type="xs:string" />
+              <xs:element minOccurs="0" name="maximumDepositLimit" type="xs:double" />
+              <xs:element name="monthlyEmailStatement" type="xs:boolean" />
+              <xs:element name="notifyMethod" type="xs:int" />
+              <xs:element name="paginationSelect" type="xs:boolean" />
+              <xs:element name="preferenceId" type="xs:int" />
+              <xs:element name="receiveEmailStatementFixedOdds" type="xs:boolean" />
+              <xs:element name="receiveEmailStatementPari" type="xs:boolean" />
+              <xs:element name="receiveEmailStatementPeriod" type="xs:boolean" />
+              <xs:element name="receiveEmailStatementSummary" type="xs:boolean" />
+              <xs:element minOccurs="0" name="timeZone" type="xs:string" />
+            </xs:sequence>
+          </xs:extension>
+        </xs:complexContent>
+      </xs:complexType>
+      <xs:complexType name="raceBetPreference">
+        <xs:complexContent mixed="false">
+          <xs:extension base="tns:preferenceResponse">
+            <xs:sequence>
+              <xs:element minOccurs="0" name="defMarketMoverDisp" type="xs:string" />
+              <xs:element name="defaultBatchViewerDisplay" type="xs:boolean" />
+              <xs:element minOccurs="0" name="defaultBetType" type="xs:string" />
+              <xs:element minOccurs="0" name="defaultBettingViewMode" type="xs:string" />
+              <xs:element minOccurs="0" name="defaultExpressMode" type="xs:string" />
+              <xs:element minOccurs="0" name="defaultRaceCode" type="xs:string" />
+              <xs:element name="flexiBetEnabled" type="xs:boolean" />
+              <xs:element minOccurs="0" name="maxDepositPeriod" type="xs:string" />
+              <xs:element minOccurs="0" name="maximumBetCost" type="xs:double" />
+            </xs:sequence>
+          </xs:extension>
+        </xs:complexContent>
+      </xs:complexType>
+      <xs:complexType name="depositFunds">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="request" type="tns:apiMeta" />
+          <xs:element minOccurs="0" name="depositFundsRequest" type="tns:depositFundsRequest" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="depositFundsRequest">
+        <xs:complexContent mixed="false">
+          <xs:extension base="tns:request">
+            <xs:sequence>
+              <xs:element minOccurs="0" name="accountPin" type="xs:long" />
+              <xs:element minOccurs="0" name="authVerificationValue" type="xs:string" />
+              <xs:element minOccurs="0" name="authorizationFlag" type="xs:string" />
+              <xs:element minOccurs="0" name="creditCardCheckValue" type="xs:string" />
+              <xs:element minOccurs="0" name="creditCardExpiryDate" type="xs:string" />
+              <xs:element minOccurs="0" name="creditCardNumber" type="xs:string" />
+              <xs:element name="creditCardType" type="xs:int" />
+              <xs:element minOccurs="0" name="currencyCode" type="xs:string" />
+              <xs:element minOccurs="0" name="depositAmount" type="xs:double" />
+              <xs:element minOccurs="0" name="enrolmentFlag" type="xs:string" />
+              <xs:element minOccurs="0" name="ipAddress" type="xs:string" />
+              <xs:element minOccurs="0" name="maskedCreditCardNumber" type="xs:string" />
+              <xs:element minOccurs="0" name="nameOnCreditCard" type="xs:string" />
+              <xs:element minOccurs="0" name="payerAuthResponse" type="xs:string" />
+              <xs:element minOccurs="0" name="paymentMethod" type="xs:int" />
+              <xs:element minOccurs="0" name="secureId" type="xs:string" />
+              <xs:element minOccurs="0" name="securityIndicator" type="xs:string" />
+              <xs:element name="tacPromotionAccepted" type="xs:boolean" />
+              <xs:element minOccurs="0" name="tokenId" type="xs:string" />
+              <xs:element minOccurs="0" name="transactionId" type="xs:string" />
+            </xs:sequence>
+          </xs:extension>
+        </xs:complexContent>
+      </xs:complexType>
+      <xs:complexType name="depositFundsResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="return" type="tns:DepositFundsResponseImpl" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="getRecentStatements">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="arg0" type="tns:apiMeta" />
+          <xs:element minOccurs="0" name="arg1" type="tns:recentStatementRequest" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="recentStatementRequest">
+        <xs:complexContent mixed="false">
+          <xs:extension base="tns:request">
+            <xs:sequence>
+              <xs:element name="deviceId" type="xs:long" />
+              <xs:element name="numberOfRows" type="xs:int" />
+              <xs:element name="transactionFilter" type="xs:short" />
+            </xs:sequence>
+          </xs:extension>
+        </xs:complexContent>
+      </xs:complexType>
+      <xs:complexType name="getRecentStatementsResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="return" type="tns:recentStatementResponse" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="recentStatementResponse">
+        <xs:complexContent mixed="false">
+          <xs:extension base="tns:response">
+            <xs:sequence>
+              <xs:element name="accountBalance" type="xs:double" />
+              <xs:element minOccurs="0" maxOccurs="unbounded" name="statementRow" nillable="true" type="tns:statementRow" />
+              <xs:element minOccurs="0" maxOccurs="unbounded" name="statementRowLive" nillable="true" type="tns:statementRowLive" />
+              <xs:element minOccurs="0" maxOccurs="unbounded" name="statementRowResolved" nillable="true" type="tns:statementRowResolved" />
+            </xs:sequence>
+          </xs:extension>
+        </xs:complexContent>
+      </xs:complexType>
+      <xs:complexType name="statementRow">
+        <xs:sequence>
+          <xs:element name="accountBalance" type="xs:double" />
+          <xs:element name="amountBase" type="xs:double" />
+          <xs:element name="amountCredit" type="xs:double" />
+          <xs:element name="amountDebit" type="xs:double" />
+          <xs:element name="amountOdds" type="xs:double" />
+          <xs:element name="amountReturns" type="xs:double" />
+          <xs:element minOccurs="0" name="betTypeDesc" type="xs:string" />
+          <xs:element name="distChannel" type="xs:short" />
+          <xs:element minOccurs="0" name="eventName" type="xs:string" />
+          <xs:element minOccurs="0" name="meetingName" type="xs:string" />
+          <xs:element minOccurs="0" name="mtgDate" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="networkId" type="xs:string" />
+          <xs:element minOccurs="0" name="outLet" type="xs:string" />
+          <xs:element minOccurs="0" name="propId" type="xs:string" />
+          <xs:element minOccurs="0" name="selectionDesc" type="xs:string" />
+          <xs:element minOccurs="0" name="soldTime" type="xs:dateTime" />
+          <xs:element name="statementType" type="xs:short" />
+          <xs:element minOccurs="0" name="status" type="xs:string" />
+          <xs:element minOccurs="0" name="meetingCode" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="statementRowLive">
+        <xs:sequence>
+          <xs:element name="accountBalance" type="xs:double" />
+          <xs:element name="amountBase" type="xs:double" />
+          <xs:element name="amountCredit" type="xs:double" />
+          <xs:element name="amountDebit" type="xs:double" />
+          <xs:element name="amountOdds" type="xs:double" />
+          <xs:element name="amountReturns" type="xs:double" />
+          <xs:element minOccurs="0" name="betTypeDesc" type="xs:string" />
+          <xs:element name="distChannel" type="xs:short" />
+          <xs:element minOccurs="0" name="eventName" type="xs:string" />
+          <xs:element minOccurs="0" name="meetingName" type="xs:string" />
+          <xs:element minOccurs="0" name="mtgDate" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="networkId" type="xs:string" />
+          <xs:element minOccurs="0" name="outLet" type="xs:string" />
+          <xs:element minOccurs="0" name="propId" type="xs:string" />
+          <xs:element minOccurs="0" name="selectionDesc" type="xs:string" />
+          <xs:element minOccurs="0" name="soldTime" type="xs:dateTime" />
+          <xs:element name="statementType" type="xs:short" />
+          <xs:element minOccurs="0" name="status" type="xs:string" />
+          <xs:element minOccurs="0" name="meetingCode" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="statementRowResolved">
+        <xs:sequence>
+          <xs:element name="accountBalance" type="xs:double" />
+          <xs:element name="amountBase" type="xs:double" />
+          <xs:element name="amountCredit" type="xs:double" />
+          <xs:element name="amountDebit" type="xs:double" />
+          <xs:element name="amountOdds" type="xs:double" />
+          <xs:element name="amountReturns" type="xs:double" />
+          <xs:element minOccurs="0" name="betTypeDesc" type="xs:string" />
+          <xs:element name="distChannel" type="xs:short" />
+          <xs:element minOccurs="0" name="eventName" type="xs:string" />
+          <xs:element minOccurs="0" name="meetingName" type="xs:string" />
+          <xs:element minOccurs="0" name="mtgDate" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="networkId" type="xs:string" />
+          <xs:element minOccurs="0" name="outLet" type="xs:string" />
+          <xs:element minOccurs="0" name="propId" type="xs:string" />
+          <xs:element minOccurs="0" name="selectionDesc" type="xs:string" />
+          <xs:element minOccurs="0" name="soldTime" type="xs:dateTime" />
+          <xs:element name="statementType" type="xs:short" />
+          <xs:element minOccurs="0" name="status" type="xs:string" />
+          <xs:element minOccurs="0" name="meetingCode" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="removeCreditCard">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="request" type="tns:apiMeta" />
+          <xs:element minOccurs="0" name="removeCreditCardRequest" type="tns:removeCreditCardRequest" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="removeCreditCardRequest">
+        <xs:complexContent mixed="false">
+          <xs:extension base="tns:request">
+            <xs:sequence>
+              <xs:element minOccurs="0" name="accountPin" type="xs:long" />
+              <xs:element minOccurs="0" name="tokenId" type="xs:string" />
+            </xs:sequence>
+          </xs:extension>
+        </xs:complexContent>
+      </xs:complexType>
+      <xs:complexType name="removeCreditCardResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="return" type="tns:RemoveCreditCardResp" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="RemoveCreditCardResp">
+        <xs:complexContent mixed="false">
+          <xs:extension base="tns:response">
+            <xs:sequence>
+              <xs:element minOccurs="0" name="creditCardRemovedTime" type="xs:dateTime" />
+            </xs:sequence>
+          </xs:extension>
+        </xs:complexContent>
+      </xs:complexType>
+      <xs:complexType name="getAccountSummary">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="request" type="tns:apiMeta" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="getAccountSummaryResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="return" type="tns:authenticateResponse" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="authenticateResponse">
+        <xs:complexContent mixed="false">
+          <xs:extension base="tns:response">
+            <xs:sequence>
+              <xs:element name="accountDisabled" type="xs:boolean" />
+              <xs:element name="accountId" type="xs:long" />
+              <xs:element minOccurs="0" name="allowableNoOfCreditCards" type="xs:int" />
+              <xs:element name="amountCreditCardFee" type="xs:double" />
+              <xs:element name="amountEFTFee" type="xs:double" />
+              <xs:element name="amountWithdraw" type="xs:double" />
+              <xs:element name="conversionRate" type="xs:double" />
+              <xs:element minOccurs="0" name="currencyCode" type="xs:string" />
+              <xs:element name="currencyConversion" type="xs:boolean" />
+              <xs:element name="customerId" type="xs:int" />
+              <xs:element name="eftWithdrawal" type="xs:boolean" />
+              <xs:element minOccurs="0" name="minCreditCardDeposit" type="xs:double" />
+              <xs:element minOccurs="0" maxOccurs="unbounded" name="registeredCreditCardList" nillable="true" type="tns:creditCardDetail" />
+              <xs:element name="withdrawalBlocked" type="xs:boolean" />
+            </xs:sequence>
+          </xs:extension>
+        </xs:complexContent>
+      </xs:complexType>
+      <xs:complexType name="creditCardDetail">
+        <xs:sequence>
+          <xs:element name="creditCardType" type="xs:int" />
+          <xs:element minOccurs="0" name="maskedCreditCardNumber" type="xs:string" />
+          <xs:element minOccurs="0" name="nameOnCreditCard" type="xs:string" />
+          <xs:element minOccurs="0" name="tokenId" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="validatePromoCode">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="apiMeta" type="tns:apiMeta" />
+          <xs:element minOccurs="0" name="promotionCode" type="tns:validatePromoCodeRequest" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="validatePromoCodeRequest">
+        <xs:complexContent mixed="false">
+          <xs:extension base="tns:request">
+            <xs:sequence>
+              <xs:element minOccurs="0" name="promoCode" type="xs:string" />
+            </xs:sequence>
+          </xs:extension>
+        </xs:complexContent>
+      </xs:complexType>
+      <xs:complexType name="validatePromoCodeResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="return" type="tns:boolResponse" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="boolResponse">
+        <xs:complexContent mixed="false">
+          <xs:extension base="tns:response">
+            <xs:sequence>
+              <xs:element name="response" type="xs:boolean" />
+            </xs:sequence>
+          </xs:extension>
+        </xs:complexContent>
+      </xs:complexType>
+      <xs:complexType name="getRaceBetPreferences">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="request" type="tns:apiMeta" />
+          <xs:element minOccurs="0" name="getRaceBetPrefRequest" type="tns:getRaceBetPrefRequest" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="getRaceBetPrefRequest">
+        <xs:complexContent mixed="false">
+          <xs:extension base="tns:request">
+            <xs:sequence>
+              <xs:element name="accountPin" type="xs:long" />
+            </xs:sequence>
+          </xs:extension>
+        </xs:complexContent>
+      </xs:complexType>
+      <xs:complexType name="getRaceBetPreferencesResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="return" type="tns:preferenceResponse" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="closeAccount">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="request" type="tns:apiMeta" />
+          <xs:element minOccurs="0" name="closeAccountRequest" type="tns:closeAccountRequest" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="closeAccountRequest">
+        <xs:complexContent mixed="false">
+          <xs:extension base="tns:request">
+            <xs:sequence>
+              <xs:element name="accountId" type="xs:long" />
+              <xs:element minOccurs="0" name="accountPin" type="xs:long" />
+              <xs:element name="paymentMethod" type="xs:int" />
+            </xs:sequence>
+          </xs:extension>
+        </xs:complexContent>
+      </xs:complexType>
+      <xs:complexType name="closeAccountResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="return" type="tns:CloseAccountResponseImpl" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="CloseAccountResponseImpl">
+        <xs:complexContent mixed="false">
+          <xs:extension base="tns:response">
+            <xs:sequence>
+              <xs:element name="amountWithdraw" type="xs:double" />
+            </xs:sequence>
+          </xs:extension>
+        </xs:complexContent>
+      </xs:complexType>
+      <xs:complexType name="acknowledgeMyTab">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="arg0" type="tns:apiMeta" />
+          <xs:element minOccurs="0" name="arg1" type="tns:acknowledgementRequest" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="acknowledgementRequest">
+        <xs:complexContent mixed="false">
+          <xs:extension base="tns:request">
+            <xs:sequence>
+              <xs:element name="acknowledged" type="xs:boolean" />
+              <xs:element minOccurs="0" name="cmsContentId" type="xs:string" />
+            </xs:sequence>
+          </xs:extension>
+        </xs:complexContent>
+      </xs:complexType>
+      <xs:complexType name="acknowledgeMyTabResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="return" type="tns:acknowledgementResponse" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="acknowledgementResponse">
+        <xs:complexContent mixed="false">
+          <xs:extension base="tns:response">
+            <xs:sequence>
+              <xs:element name="acknowledged" type="xs:boolean" />
+              <xs:element minOccurs="0" name="cmsContentId" type="xs:string" />
+            </xs:sequence>
+          </xs:extension>
+        </xs:complexContent>
+      </xs:complexType>
+      <xs:complexType name="getRedemptionHistory">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="apiMeta" type="tns:apiMeta" />
+          <xs:element minOccurs="0" name="redemptionHistoryRequest" type="tns:redemptionHistoryRequest" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="redemptionHistoryRequest">
+        <xs:complexContent mixed="false">
+          <xs:extension base="tns:request">
+            <xs:sequence />
+          </xs:extension>
+        </xs:complexContent>
+      </xs:complexType>
+      <xs:complexType name="getRedemptionHistoryResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="return" type="tns:redemptionHistoryResponse" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="redemptionHistoryResponse">
+        <xs:complexContent mixed="false">
+          <xs:extension base="tns:response">
+            <xs:sequence>
+              <xs:element minOccurs="0" maxOccurs="unbounded" name="redemptionHistory" nillable="true" type="tns:redemptionHistory" />
+            </xs:sequence>
+          </xs:extension>
+        </xs:complexContent>
+      </xs:complexType>
+      <xs:complexType name="redemptionHistory">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="amount" type="xs:double" />
+          <xs:element minOccurs="0" name="promotionCode" type="xs:string" />
+          <xs:element minOccurs="0" name="promotionDescription" type="xs:string" />
+          <xs:element minOccurs="0" name="redeemedDate" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="redeemedDateString" type="xs:string" />
+          <xs:element minOccurs="0" name="termsAndConditions" type="xs:string" />
+          <xs:element minOccurs="0" name="validTo" type="xs:dateTime" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="getAccountDetails">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="request" type="tns:apiMeta" />
+          <xs:element minOccurs="0" name="getAccountDetailsRequest" type="tns:getAccountDetailsRequest" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="getAccountDetailsRequest">
+        <xs:complexContent mixed="false">
+          <xs:extension base="tns:request">
+            <xs:sequence />
+          </xs:extension>
+        </xs:complexContent>
+      </xs:complexType>
+      <xs:complexType name="getAccountDetailsResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="return" type="tns:GetAccountDetailsResponseImpl" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="GetAccountDetailsResponseImpl">
+        <xs:complexContent mixed="false">
+          <xs:extension base="tns:response">
+            <xs:sequence>
+              <xs:element minOccurs="0" name="acceptPartial" type="xs:int" />
+              <xs:element name="acceptReducedOdds" type="xs:boolean" />
+              <xs:element minOccurs="0" name="accountBalance" type="xs:double" />
+              <xs:element minOccurs="0" name="affiliateBetType" type="xs:string" />
+              <xs:element minOccurs="0" name="affiliateChannel" type="xs:string" />
+              <xs:element minOccurs="0" name="affiliateCode" type="xs:string" />
+              <xs:element minOccurs="0" name="brandingTheme" type="xs:string" />
+              <xs:element minOccurs="0" name="creditCardCheckValue" type="xs:string" />
+              <xs:element minOccurs="0" name="creditCardExpiryDate" type="xs:string" />
+              <xs:element minOccurs="0" name="creditCardNumber" type="xs:string" />
+              <xs:element name="creditCardType" type="xs:int" />
+              <xs:element minOccurs="0" name="currencyCode" type="xs:string" />
+              <xs:element name="currencyConversion" type="xs:boolean" />
+              <xs:element minOccurs="0" name="dateOfBirth" type="xs:dateTime" />
+              <xs:element minOccurs="0" name="defAccountPeriod" type="xs:int" />
+              <xs:element minOccurs="0" name="defAccountStatement" type="xs:string" />
+              <xs:element minOccurs="0" name="defHomepage" type="xs:string" />
+              <xs:element name="defRacingBetting" type="xs:boolean" />
+              <xs:element name="defaultBatchViewerDisplay" type="xs:boolean" />
+              <xs:element minOccurs="0" name="defaultBetType" type="xs:string" />
+              <xs:element minOccurs="0" name="defaultExpressMode" type="xs:string" />
+              <xs:element name="defaultForm" type="xs:boolean" />
+              <xs:element name="defaultMarketMoversDisplay" type="xs:boolean" />
+              <xs:element minOccurs="0" name="defaultRaceCode" type="xs:string" />
+              <xs:element name="defaultSportMarket" type="xs:boolean" />
+              <xs:element name="dispContextualHelp" type="xs:boolean" />
+              <xs:element minOccurs="0" name="emailId" type="xs:string" />
+              <xs:element name="emailStatement" type="xs:boolean" />
+              <xs:element minOccurs="0" name="fax" type="xs:string" />
+              <xs:element minOccurs="0" name="firstName" type="xs:string" />
+              <xs:element name="flexiBetEnabled" type="xs:boolean" />
+              <xs:element name="gamblingProhibitedTAC" type="xs:boolean" />
+              <xs:element minOccurs="0" name="gender" type="xs:string" />
+              <xs:element minOccurs="0" name="homeAddressNo" type="xs:string" />
+              <xs:element minOccurs="0" name="homeCountry" type="xs:int" />
+              <xs:element minOccurs="0" name="homePhoneNo" type="xs:string" />
+              <xs:element minOccurs="0" name="homePostCode" type="xs:string" />
+              <xs:element name="homeState" type="xs:int" />
+              <xs:element minOccurs="0" name="homeStreet" type="xs:string" />
+              <xs:element minOccurs="0" name="homeSuburb" type="xs:string" />
+              <xs:element minOccurs="0" name="homeprovince" type="xs:string" />
+              <xs:element name="initialDeposit" type="xs:double" />
+              <xs:element name="internetBettingTAC" type="xs:boolean" />
+              <xs:element minOccurs="0" name="ipAddress" type="xs:string" />
+              <xs:element minOccurs="0" name="language" type="xs:string" />
+              <xs:element minOccurs="0" name="lastBetPlacedTime" type="xs:dateTime" />
+              <xs:element minOccurs="0" name="lastBetTime" type="xs:dateTime" />
+              <xs:element minOccurs="0" name="lastName" type="xs:string" />
+              <xs:element name="maximumBetCost" type="xs:double" />
+              <xs:element minOccurs="0" name="maximumDepositLimit" type="xs:double" />
+              <xs:element minOccurs="0" name="mobileNo" type="xs:string" />
+              <xs:element minOccurs="0" name="nameOnCreditCard" type="xs:string" />
+              <xs:element minOccurs="0" name="notifyAddress" type="xs:string" />
+              <xs:element minOccurs="0" name="notifyFormat" type="xs:string" />
+              <xs:element name="notifyMethod" type="xs:int" />
+              <xs:element name="paginationSelect" type="xs:boolean" />
+              <xs:element name="partnerpromo" type="xs:boolean" />
+              <xs:element name="paymentMethod" type="xs:int" />
+              <xs:element minOccurs="0" name="postAddressNo" type="xs:string" />
+              <xs:element minOccurs="0" name="postCountry" type="xs:int" />
+              <xs:element minOccurs="0" name="postPostCode" type="xs:string" />
+              <xs:element name="postState" type="xs:int" />
+              <xs:element minOccurs="0" name="postStreet" type="xs:string" />
+              <xs:element minOccurs="0" name="postSuburb" type="xs:string" />
+              <xs:element minOccurs="0" name="postprovince" type="xs:string" />
+              <xs:element minOccurs="0" name="promoCode" type="xs:string" />
+              <xs:element minOccurs="0" name="referral" type="xs:string" />
+              <xs:element name="tabpromo" type="xs:boolean" />
+              <xs:element minOccurs="0" name="timeZone" type="xs:string" />
+              <xs:element minOccurs="0" name="title" type="xs:int" />
+              <xs:element name="weeklyDepositLimit" type="xs:double" />
+              <xs:element minOccurs="0" name="workPhoneNo" type="xs:string" />
+            </xs:sequence>
+          </xs:extension>
+        </xs:complexContent>
+      </xs:complexType>
+      <xs:complexType name="validateAccount">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="request" type="tns:apiMeta" />
+          <xs:element minOccurs="0" name="validateAccountRequest" type="tns:validateAccountRequest" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="validateAccountRequest">
+        <xs:complexContent mixed="false">
+          <xs:extension base="tns:request">
+            <xs:sequence>
+              <xs:element name="accountId" type="xs:long" />
+              <xs:element name="accountPin" type="xs:long" />
+              <xs:element minOccurs="0" name="lastName" type="xs:string" />
+            </xs:sequence>
+          </xs:extension>
+        </xs:complexContent>
+      </xs:complexType>
+      <xs:complexType name="validateAccountResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="return" type="tns:ValidateAccountResponseImpl" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="ValidateAccountResponseImpl">
+        <xs:complexContent mixed="false">
+          <xs:extension base="tns:response">
+            <xs:sequence>
+              <xs:element name="accountBalance" type="xs:double" />
+              <xs:element name="accountDisabled" type="xs:boolean" />
+              <xs:element name="accountId" type="xs:long" />
+              <xs:element name="amountCreditCardFee" type="xs:double" />
+              <xs:element name="amountEFTFee" type="xs:double" />
+              <xs:element name="amountWithdraw" type="xs:double" />
+              <xs:element name="blockedForFixedOddBetting" type="xs:boolean" />
+              <xs:element minOccurs="0" name="challengeQuestion" type="xs:string" />
+              <xs:element name="checkAddress" type="xs:boolean" />
+              <xs:element name="contactCustomerService" type="xs:boolean" />
+              <xs:element name="customerId" type="xs:int" />
+              <xs:element name="eftWithdrawal" type="xs:boolean" />
+              <xs:element name="internetBankingEnabled" type="xs:boolean" />
+              <xs:element name="jurisdictionId" type="xs:long" />
+              <xs:element name="minimumBetExempt" type="xs:boolean" />
+              <xs:element name="tierCode" type="xs:int" />
+              <xs:element name="withdrawalBlocked" type="xs:boolean" />
+            </xs:sequence>
+          </xs:extension>
+        </xs:complexContent>
+      </xs:complexType>
+      <xs:complexType name="saveCreditCardDetails">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="request" type="tns:apiMeta" />
+          <xs:element minOccurs="0" name="saveCreditCardDetailsRequest" type="tns:saveCreditCardDetailsRequest" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="saveCreditCardDetailsRequest">
+        <xs:complexContent mixed="false">
+          <xs:extension base="tns:request">
+            <xs:sequence>
+              <xs:element minOccurs="0" name="nameOnCreditCard" type="xs:string" />
+              <xs:element minOccurs="0" name="sessionId" type="xs:string" />
+              <xs:element minOccurs="0" name="transactionType" type="xs:string" />
+            </xs:sequence>
+          </xs:extension>
+        </xs:complexContent>
+      </xs:complexType>
+      <xs:complexType name="saveCreditCardDetailsResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="return" type="tns:SaveCreditCardDetailsResp" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="SaveCreditCardDetailsResp">
+        <xs:complexContent mixed="false">
+          <xs:extension base="tns:response">
+            <xs:sequence>
+              <xs:element minOccurs="0" name="creditCardExpiryDate" type="xs:string" />
+              <xs:element name="creditCardType" type="xs:int" />
+              <xs:element minOccurs="0" name="gatewayCode" type="xs:string" />
+              <xs:element minOccurs="0" name="gatewayMessage" type="xs:string" />
+              <xs:element minOccurs="0" name="maskedCreditCardNumber" type="xs:string" />
+              <xs:element minOccurs="0" name="tokenId" type="xs:string" />
+            </xs:sequence>
+          </xs:extension>
+        </xs:complexContent>
+      </xs:complexType>
+      <xs:complexType name="forgotPassword">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="request" type="tns:apiMeta" />
+          <xs:element minOccurs="0" name="forgotPasswordRequest" type="tns:forgotPasswordRequest" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="forgotPasswordRequest">
+        <xs:complexContent mixed="false">
+          <xs:extension base="tns:request">
+            <xs:sequence>
+              <xs:element name="accountId" type="xs:long" />
+              <xs:element minOccurs="0" name="accountPasswordNew" type="xs:string" />
+              <xs:element minOccurs="0" name="challengeAnswer" type="xs:string" />
+            </xs:sequence>
+          </xs:extension>
+        </xs:complexContent>
+      </xs:complexType>
+      <xs:complexType name="forgotPasswordResponse">
+        <xs:sequence>
+          <xs:element name="return" type="xs:boolean" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="updateCreditCardDetails">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="request" type="tns:apiMeta" />
+          <xs:element minOccurs="0" name="updateCreditCardDetailsRequest" type="tns:updateCreditCardDetailsRequest" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="updateCreditCardDetailsRequest">
+        <xs:complexContent mixed="false">
+          <xs:extension base="tns:request">
+            <xs:sequence>
+              <xs:element minOccurs="0" name="accountPin" type="xs:long" />
+              <xs:element minOccurs="0" name="creditCardExpiryDate" type="xs:string" />
+              <xs:element minOccurs="0" name="tokenId" type="xs:string" />
+            </xs:sequence>
+          </xs:extension>
+        </xs:complexContent>
+      </xs:complexType>
+      <xs:complexType name="updateCreditCardDetailsResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="return" type="tns:UpdateCreditCardDetailsResp" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="UpdateCreditCardDetailsResp">
+        <xs:complexContent mixed="false">
+          <xs:extension base="tns:response">
+            <xs:sequence>
+              <xs:element minOccurs="0" name="creditCardUpdatedTime" type="xs:dateTime" />
+            </xs:sequence>
+          </xs:extension>
+        </xs:complexContent>
+      </xs:complexType>
+      <xs:complexType name="updateRaceBetPref">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="request" type="tns:apiMeta" />
+          <xs:element minOccurs="0" name="updateRaceBetPrefRequest" type="tns:updateBettingPreferencesRequest" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="updateBettingPreferencesRequest">
+        <xs:complexContent mixed="false">
+          <xs:extension base="tns:preferenceRequest">
+            <xs:sequence>
+              <xs:element name="accountPin" type="xs:long" />
+              <xs:element minOccurs="0" name="defMarketMoverDisp" type="xs:string" />
+              <xs:element name="defaultBatchViewerDisplay" type="xs:boolean" />
+              <xs:element minOccurs="0" name="defaultBetType" type="xs:string" />
+              <xs:element minOccurs="0" name="defaultBettingViewMode" type="xs:string" />
+              <xs:element minOccurs="0" name="defaultExpressMode" type="xs:string" />
+              <xs:element minOccurs="0" name="defaultRaceCode" type="xs:string" />
+              <xs:element name="flexiBetEnabled" type="xs:boolean" />
+              <xs:element minOccurs="0" name="maxDepositPeriod" type="xs:string" />
+              <xs:element minOccurs="0" name="maximumBetCost" type="xs:double" />
+              <xs:element name="maximumDepositLimit" type="xs:double" />
+            </xs:sequence>
+          </xs:extension>
+        </xs:complexContent>
+      </xs:complexType>
+      <xs:complexType name="updateRaceBetPrefResponse">
+        <xs:sequence>
+          <xs:element name="return" type="xs:boolean" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="verifyPCLLimit">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="arg0" type="tns:apiMeta" />
+          <xs:element minOccurs="0" name="arg1" type="tns:pclLimitRequest" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="pclLimitRequest">
+        <xs:complexContent mixed="false">
+          <xs:extension base="tns:request">
+            <xs:sequence>
+              <xs:element minOccurs="0" name="depositAmount" type="xs:double" />
+              <xs:element minOccurs="0" name="paymentIndicator" type="xs:int" />
+            </xs:sequence>
+          </xs:extension>
+        </xs:complexContent>
+      </xs:complexType>
+      <xs:complexType name="verifyPCLLimitResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="return" type="tns:pclLimitResponse" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="pclLimitResponse">
+        <xs:complexContent mixed="false">
+          <xs:extension base="tns:response">
+            <xs:sequence>
+              <xs:element minOccurs="0" name="amount" type="xs:double" />
+              <xs:element minOccurs="0" name="status" type="xs:string" />
+            </xs:sequence>
+          </xs:extension>
+        </xs:complexContent>
+      </xs:complexType>
+      <xs:complexType name="validateCustomerName">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="request" type="tns:apiMeta" />
+          <xs:element minOccurs="0" name="validateCustomerNameRequest" type="tns:validateCustomerNameRequest" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="validateCustomerNameRequest">
+        <xs:complexContent mixed="false">
+          <xs:extension base="tns:request">
+            <xs:sequence>
+              <xs:element name="accountId" type="xs:long" />
+              <xs:element name="accountPin" type="xs:long" />
+              <xs:element minOccurs="0" name="lastName" type="xs:string" />
+            </xs:sequence>
+          </xs:extension>
+        </xs:complexContent>
+      </xs:complexType>
+      <xs:complexType name="validateCustomerNameResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="return" type="tns:ValidateCustomerNameResp" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="ValidateCustomerNameResp">
+        <xs:complexContent mixed="false">
+          <xs:extension base="tns:response">
+            <xs:sequence>
+              <xs:element minOccurs="0" name="transactionTime" type="xs:dateTime" />
+            </xs:sequence>
+          </xs:extension>
+        </xs:complexContent>
+      </xs:complexType>
+      <xs:complexType name="validateCloseAccount">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="request" type="tns:apiMeta" />
+          <xs:element minOccurs="0" name="closeAccountRequest" type="tns:validateCloseAccountRequest" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="validateCloseAccountRequest">
+        <xs:complexContent mixed="false">
+          <xs:extension base="tns:request">
+            <xs:sequence>
+              <xs:element minOccurs="0" name="accountId" type="xs:long" />
+              <xs:element minOccurs="0" name="accountPassword" type="xs:string" />
+              <xs:element minOccurs="0" name="accountPin" type="xs:long" />
+            </xs:sequence>
+          </xs:extension>
+        </xs:complexContent>
+      </xs:complexType>
+      <xs:complexType name="validateCloseAccountResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="return" type="tns:CloseAccountResponseImpl" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="redeemPromotion">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="apiMeta" type="tns:apiMeta" />
+          <xs:element minOccurs="0" name="redeemNowRequest" type="tns:redeemNowRequest" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="redeemNowRequest">
+        <xs:complexContent mixed="false">
+          <xs:extension base="tns:request">
+            <xs:sequence>
+              <xs:element name="customerId" type="xs:int" />
+              <xs:element minOccurs="0" name="promotionCode" type="xs:string" />
+              <xs:element minOccurs="0" name="requestType" type="xs:string" />
+            </xs:sequence>
+          </xs:extension>
+        </xs:complexContent>
+      </xs:complexType>
+      <xs:complexType name="redeemPromotionResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="return" type="tns:redeemNowResponse" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="redeemNowResponse">
+        <xs:complexContent mixed="false">
+          <xs:extension base="tns:response">
+            <xs:sequence>
+              <xs:element name="accountBalance" type="xs:double" />
+              <xs:element name="amount" type="xs:double" />
+              <xs:element minOccurs="0" name="transactionDate" type="xs:dateTime" />
+              <xs:element minOccurs="0" name="transactionNumber" type="xs:string" />
+            </xs:sequence>
+          </xs:extension>
+        </xs:complexContent>
+      </xs:complexType>
+      <xs:complexType name="getOpenTicketCount">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="request" type="tns:apiMeta" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="getOpenTicketCountResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="return" type="xs:int" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:simpleType name="timeZoneEnum">
+        <xs:restriction base="xs:string">
+          <xs:enumeration value="DST" />
+          <xs:enumeration value="CST" />
+          <xs:enumeration value="MST" />
+          <xs:enumeration value="CCST" />
+          <xs:enumeration value="SAPST" />
+          <xs:enumeration value="EST" />
+          <xs:enumeration value="USEST" />
+          <xs:enumeration value="AST" />
+          <xs:enumeration value="SAWST" />
+          <xs:enumeration value="PSAST" />
+          <xs:enumeration value="NST" />
+          <xs:enumeration value="SST" />
+          <xs:enumeration value="ESAST" />
+          <xs:enumeration value="SAEST" />
+          <xs:enumeration value="GST" />
+          <xs:enumeration value="MAST" />
+          <xs:enumeration value="AST1" />
+          <xs:enumeration value="CVST" />
+          <xs:enumeration value="GST1" />
+          <xs:enumeration value="GMTST" />
+          <xs:enumeration value="WEST" />
+          <xs:enumeration value="CEST" />
+          <xs:enumeration value="HST" />
+          <xs:enumeration value="RST" />
+          <xs:enumeration value="CEST1" />
+          <xs:enumeration value="WCAST" />
+          <xs:enumeration value="GTBST" />
+          <xs:enumeration value="EEST" />
+          <xs:enumeration value="EST1" />
+          <xs:enumeration value="SAST" />
+          <xs:enumeration value="FLEST" />
+          <xs:enumeration value="IST" />
+          <xs:enumeration value="AST2" />
+          <xs:enumeration value="AST3" />
+          <xs:enumeration value="AST4" />
+          <xs:enumeration value="RST1" />
+          <xs:enumeration value="EAST" />
+          <xs:enumeration value="IST1" />
+          <xs:enumeration value="AST5" />
+          <xs:enumeration value="CST1" />
+          <xs:enumeration value="AST6" />
+          <xs:enumeration value="EST2" />
+          <xs:enumeration value="WAST" />
+          <xs:enumeration value="IST2" />
+          <xs:enumeration value="PST" />
+          <xs:enumeration value="NST1" />
+          <xs:enumeration value="NCAST" />
+          <xs:enumeration value="CAST" />
+          <xs:enumeration value="SLST" />
+          <xs:enumeration value="MST1" />
+          <xs:enumeration value="SEAST" />
+          <xs:enumeration value="NAST" />
+          <xs:enumeration value="CST2" />
+          <xs:enumeration value="NEAST" />
+          <xs:enumeration value="SST1" />
+          <xs:enumeration value="USMST" />
+          <xs:enumeration value="WAST1" />
+          <xs:enumeration value="TST" />
+          <xs:enumeration value="TST1" />
+          <xs:enumeration value="KST" />
+          <xs:enumeration value="YST" />
+          <xs:enumeration value="CAST1" />
+          <xs:enumeration value="ACST" />
+          <xs:enumeration value="EAST1" />
+          <xs:enumeration value="AEST" />
+          <xs:enumeration value="WPST" />
+          <xs:enumeration value="MST2" />
+          <xs:enumeration value="TST2" />
+          <xs:enumeration value="VST" />
+          <xs:enumeration value="CPST" />
+          <xs:enumeration value="NZST" />
+          <xs:enumeration value="FST" />
+          <xs:enumeration value="TST3" />
+          <xs:enumeration value="MST3" />
+          <xs:enumeration value="CAST2" />
+        </xs:restriction>
+      </xs:simpleType>
+      <xs:element name="APIException" type="tns:APIException" />
+      <xs:complexType name="APIException">
+        <xs:sequence>
+          <xs:element name="messageDetail" nillable="true" type="xs:string" />
+          <xs:element name="errorType" nillable="true" type="xs:string" />
+          <xs:element name="messageMap" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+    </xs:schema>
+  </wsdl:types>
+  <wsdl:message name="getCurrencyConversionRate">
+    <wsdl:part name="parameters" element="tns:getCurrencyConversionRate" />
+  </wsdl:message>
+  <wsdl:message name="getGeneralAccountPreferences">
+    <wsdl:part name="parameters" element="tns:getGeneralAccountPreferences" />
+  </wsdl:message>
+  <wsdl:message name="validateAccount">
+    <wsdl:part name="parameters" element="tns:validateAccount" />
+  </wsdl:message>
+  <wsdl:message name="getAccountStatement">
+    <wsdl:part name="parameters" element="tns:getAccountStatement" />
+  </wsdl:message>
+  <wsdl:message name="getRaceBetPreferences">
+    <wsdl:part name="parameters" element="tns:getRaceBetPreferences" />
+  </wsdl:message>
+  <wsdl:message name="getRaceBetPreferencesResponse">
+    <wsdl:part name="parameters" element="tns:getRaceBetPreferencesResponse" />
+  </wsdl:message>
+  <wsdl:message name="registerCreditCardResponse">
+    <wsdl:part name="parameters" element="tns:registerCreditCardResponse" />
+  </wsdl:message>
+  <wsdl:message name="saveCreditCardDetailsResponse">
+    <wsdl:part name="parameters" element="tns:saveCreditCardDetailsResponse" />
+  </wsdl:message>
+  <wsdl:message name="createAccountResponse">
+    <wsdl:part name="parameters" element="tns:createAccountResponse" />
+  </wsdl:message>
+  <wsdl:message name="getAccountBalance">
+    <wsdl:part name="parameters" element="tns:getAccountBalance" />
+  </wsdl:message>
+  <wsdl:message name="updateAccountDetails">
+    <wsdl:part name="parameters" element="tns:updateAccountDetails" />
+  </wsdl:message>
+  <wsdl:message name="closeAccountResponse">
+    <wsdl:part name="parameters" element="tns:closeAccountResponse" />
+  </wsdl:message>
+  <wsdl:message name="withdrawFundsResponse">
+    <wsdl:part name="parameters" element="tns:withdrawFundsResponse" />
+  </wsdl:message>
+  <wsdl:message name="activateAccountResponse">
+    <wsdl:part name="parameters" element="tns:activateAccountResponse" />
+  </wsdl:message>
+  <wsdl:message name="depositFundsPOLiResponse">
+    <wsdl:part name="parameters" element="tns:depositFundsPOLiResponse" />
+  </wsdl:message>
+  <wsdl:message name="getAccountBalanceResponse">
+    <wsdl:part name="parameters" element="tns:getAccountBalanceResponse" />
+  </wsdl:message>
+  <wsdl:message name="verifyPCLLimit">
+    <wsdl:part name="parameters" element="tns:verifyPCLLimit" />
+  </wsdl:message>
+  <wsdl:message name="updateRaceBetPref">
+    <wsdl:part name="parameters" element="tns:updateRaceBetPref" />
+  </wsdl:message>
+  <wsdl:message name="validatePromoCodeResponse">
+    <wsdl:part name="parameters" element="tns:validatePromoCodeResponse" />
+  </wsdl:message>
+  <wsdl:message name="getPromoAndBBCount">
+    <wsdl:part name="parameters" element="tns:getPromoAndBBCount" />
+  </wsdl:message>
+  <wsdl:message name="createPaymentGatewaySessionResponse">
+    <wsdl:part name="parameters" element="tns:createPaymentGatewaySessionResponse" />
+  </wsdl:message>
+  <wsdl:message name="depositFundsResponse">
+    <wsdl:part name="parameters" element="tns:depositFundsResponse" />
+  </wsdl:message>
+  <wsdl:message name="createAccount">
+    <wsdl:part name="parameters" element="tns:createAccount" />
+  </wsdl:message>
+  <wsdl:message name="getAvailablePromotionsResponse">
+    <wsdl:part name="parameters" element="tns:getAvailablePromotionsResponse" />
+  </wsdl:message>
+  <wsdl:message name="validateCloseAccountResponse">
+    <wsdl:part name="parameters" element="tns:validateCloseAccountResponse" />
+  </wsdl:message>
+  <wsdl:message name="changePassword">
+    <wsdl:part name="parameters" element="tns:changePassword" />
+  </wsdl:message>
+  <wsdl:message name="activateAccount">
+    <wsdl:part name="parameters" element="tns:activateAccount" />
+  </wsdl:message>
+  <wsdl:message name="saveCreditCardDetails">
+    <wsdl:part name="parameters" element="tns:saveCreditCardDetails" />
+  </wsdl:message>
+  <wsdl:message name="getChallengeQuestion">
+    <wsdl:part name="parameters" element="tns:getChallengeQuestion" />
+  </wsdl:message>
+  <wsdl:message name="getPoliTransactionResponse">
+    <wsdl:part name="parameters" element="tns:getPoliTransactionResponse" />
+  </wsdl:message>
+  <wsdl:message name="getPoliTransaction">
+    <wsdl:part name="parameters" element="tns:getPoliTransaction" />
+  </wsdl:message>
+  <wsdl:message name="changePasswordResponse">
+    <wsdl:part name="parameters" element="tns:changePasswordResponse" />
+  </wsdl:message>
+  <wsdl:message name="validateCustomerName">
+    <wsdl:part name="parameters" element="tns:validateCustomerName" />
+  </wsdl:message>
+  <wsdl:message name="verifyPCLLimitResponse">
+    <wsdl:part name="parameters" element="tns:verifyPCLLimitResponse" />
+  </wsdl:message>
+  <wsdl:message name="getOpenTicketCount">
+    <wsdl:part name="parameters" element="tns:getOpenTicketCount" />
+  </wsdl:message>
+  <wsdl:message name="updateGeneralPreferencesResponse">
+    <wsdl:part name="parameters" element="tns:updateGeneralPreferencesResponse" />
+  </wsdl:message>
+  <wsdl:message name="updateAccountDetailsResponse">
+    <wsdl:part name="parameters" element="tns:updateAccountDetailsResponse" />
+  </wsdl:message>
+  <wsdl:message name="removeCreditCard">
+    <wsdl:part name="parameters" element="tns:removeCreditCard" />
+  </wsdl:message>
+  <wsdl:message name="getAccountStatementResponse">
+    <wsdl:part name="parameters" element="tns:getAccountStatementResponse" />
+  </wsdl:message>
+  <wsdl:message name="APIException">
+    <wsdl:part name="APIException" element="tns:APIException" />
+  </wsdl:message>
+  <wsdl:message name="removeCreditCardResponse">
+    <wsdl:part name="parameters" element="tns:removeCreditCardResponse" />
+  </wsdl:message>
+  <wsdl:message name="forgotPasswordResponse">
+    <wsdl:part name="parameters" element="tns:forgotPasswordResponse" />
+  </wsdl:message>
+  <wsdl:message name="acknowledgeMyTabResponse">
+    <wsdl:part name="parameters" element="tns:acknowledgeMyTabResponse" />
+  </wsdl:message>
+  <wsdl:message name="updateRaceBetPrefResponse">
+    <wsdl:part name="parameters" element="tns:updateRaceBetPrefResponse" />
+  </wsdl:message>
+  <wsdl:message name="registerCreditCard">
+    <wsdl:part name="parameters" element="tns:registerCreditCard" />
+  </wsdl:message>
+  <wsdl:message name="validateCloseAccount">
+    <wsdl:part name="parameters" element="tns:validateCloseAccount" />
+  </wsdl:message>
+  <wsdl:message name="getRedemptionHistory">
+    <wsdl:part name="parameters" element="tns:getRedemptionHistory" />
+  </wsdl:message>
+  <wsdl:message name="depositFundsPOLi">
+    <wsdl:part name="parameters" element="tns:depositFundsPOLi" />
+  </wsdl:message>
+  <wsdl:message name="getAccountDetailsResponse">
+    <wsdl:part name="parameters" element="tns:getAccountDetailsResponse" />
+  </wsdl:message>
+  <wsdl:message name="getChallengeQuestionResponse">
+    <wsdl:part name="parameters" element="tns:getChallengeQuestionResponse" />
+  </wsdl:message>
+  <wsdl:message name="getAccountSummary">
+    <wsdl:part name="parameters" element="tns:getAccountSummary" />
+  </wsdl:message>
+  <wsdl:message name="updateCreditCardDetailsResponse">
+    <wsdl:part name="parameters" element="tns:updateCreditCardDetailsResponse" />
+  </wsdl:message>
+  <wsdl:message name="validateCustomerNameResponse">
+    <wsdl:part name="parameters" element="tns:validateCustomerNameResponse" />
+  </wsdl:message>
+  <wsdl:message name="updateCreditCardDetails">
+    <wsdl:part name="parameters" element="tns:updateCreditCardDetails" />
+  </wsdl:message>
+  <wsdl:message name="acknowledgeMyTab">
+    <wsdl:part name="parameters" element="tns:acknowledgeMyTab" />
+  </wsdl:message>
+  <wsdl:message name="redeemPromotion">
+    <wsdl:part name="parameters" element="tns:redeemPromotion" />
+  </wsdl:message>
+  <wsdl:message name="initPoliTransactionResponse">
+    <wsdl:part name="parameters" element="tns:initPoliTransactionResponse" />
+  </wsdl:message>
+  <wsdl:message name="getRecentStatementsResponse">
+    <wsdl:part name="parameters" element="tns:getRecentStatementsResponse" />
+  </wsdl:message>
+  <wsdl:message name="validateAccountResponse">
+    <wsdl:part name="parameters" element="tns:validateAccountResponse" />
+  </wsdl:message>
+  <wsdl:message name="getRecentStatements">
+    <wsdl:part name="parameters" element="tns:getRecentStatements" />
+  </wsdl:message>
+  <wsdl:message name="getRedemptionHistoryResponse">
+    <wsdl:part name="parameters" element="tns:getRedemptionHistoryResponse" />
+  </wsdl:message>
+  <wsdl:message name="depositFunds">
+    <wsdl:part name="parameters" element="tns:depositFunds" />
+  </wsdl:message>
+  <wsdl:message name="getCurrencyConversionRateResponse">
+    <wsdl:part name="parameters" element="tns:getCurrencyConversionRateResponse" />
+  </wsdl:message>
+  <wsdl:message name="getAccountDetails">
+    <wsdl:part name="parameters" element="tns:getAccountDetails" />
+  </wsdl:message>
+  <wsdl:message name="getGeneralAccountPreferencesResponse">
+    <wsdl:part name="parameters" element="tns:getGeneralAccountPreferencesResponse" />
+  </wsdl:message>
+  <wsdl:message name="initPoliTransaction">
+    <wsdl:part name="parameters" element="tns:initPoliTransaction" />
+  </wsdl:message>
+  <wsdl:message name="getPromoAndBBCountResponse">
+    <wsdl:part name="parameters" element="tns:getPromoAndBBCountResponse" />
+  </wsdl:message>
+  <wsdl:message name="validatePromoCode">
+    <wsdl:part name="parameters" element="tns:validatePromoCode" />
+  </wsdl:message>
+  <wsdl:message name="updateGeneralPreferences">
+    <wsdl:part name="parameters" element="tns:updateGeneralPreferences" />
+  </wsdl:message>
+  <wsdl:message name="checkCreditCardEnrolment">
+    <wsdl:part name="parameters" element="tns:checkCreditCardEnrolment" />
+  </wsdl:message>
+  <wsdl:message name="getAvailablePromotions">
+    <wsdl:part name="parameters" element="tns:getAvailablePromotions" />
+  </wsdl:message>
+  <wsdl:message name="getAccountSummaryResponse">
+    <wsdl:part name="parameters" element="tns:getAccountSummaryResponse" />
+  </wsdl:message>
+  <wsdl:message name="getOpenTicketCountResponse">
+    <wsdl:part name="parameters" element="tns:getOpenTicketCountResponse" />
+  </wsdl:message>
+  <wsdl:message name="closeAccount">
+    <wsdl:part name="parameters" element="tns:closeAccount" />
+  </wsdl:message>
+  <wsdl:message name="redeemPromotionResponse">
+    <wsdl:part name="parameters" element="tns:redeemPromotionResponse" />
+  </wsdl:message>
+  <wsdl:message name="withdrawFunds">
+    <wsdl:part name="parameters" element="tns:withdrawFunds" />
+  </wsdl:message>
+  <wsdl:message name="createPaymentGatewaySession">
+    <wsdl:part name="parameters" element="tns:createPaymentGatewaySession" />
+  </wsdl:message>
+  <wsdl:message name="forgotPassword">
+    <wsdl:part name="parameters" element="tns:forgotPassword" />
+  </wsdl:message>
+  <wsdl:message name="checkCreditCardEnrolmentResponse">
+    <wsdl:part name="parameters" element="tns:checkCreditCardEnrolmentResponse" />
+  </wsdl:message>
+  <wsdl:portType name="AccountMgmtService">
+    <wsdl:operation name="initPoliTransaction">
+      <wsdl:input name="initPoliTransaction" message="tns:initPoliTransaction" />
+      <wsdl:output name="initPoliTransactionResponse" message="tns:initPoliTransactionResponse" />
+      <wsdl:fault name="APIException" message="tns:APIException" />
+    </wsdl:operation>
+    <wsdl:operation name="updateAccountDetails">
+      <wsdl:input name="updateAccountDetails" message="tns:updateAccountDetails" />
+      <wsdl:output name="updateAccountDetailsResponse" message="tns:updateAccountDetailsResponse" />
+      <wsdl:fault name="APIException" message="tns:APIException" />
+    </wsdl:operation>
+    <wsdl:operation name="createAccount">
+      <wsdl:input name="createAccount" message="tns:createAccount" />
+      <wsdl:output name="createAccountResponse" message="tns:createAccountResponse" />
+      <wsdl:fault name="APIException" message="tns:APIException" />
+    </wsdl:operation>
+    <wsdl:operation name="registerCreditCard">
+      <wsdl:input name="registerCreditCard" message="tns:registerCreditCard" />
+      <wsdl:output name="registerCreditCardResponse" message="tns:registerCreditCardResponse" />
+      <wsdl:fault name="APIException" message="tns:APIException" />
+    </wsdl:operation>
+    <wsdl:operation name="getAvailablePromotions">
+      <wsdl:input name="getAvailablePromotions" message="tns:getAvailablePromotions" />
+      <wsdl:output name="getAvailablePromotionsResponse" message="tns:getAvailablePromotionsResponse" />
+      <wsdl:fault name="APIException" message="tns:APIException" />
+    </wsdl:operation>
+    <wsdl:operation name="getChallengeQuestion">
+      <wsdl:input name="getChallengeQuestion" message="tns:getChallengeQuestion" />
+      <wsdl:output name="getChallengeQuestionResponse" message="tns:getChallengeQuestionResponse" />
+      <wsdl:fault name="APIException" message="tns:APIException" />
+    </wsdl:operation>
+    <wsdl:operation name="updateGeneralPreferences">
+      <wsdl:input name="updateGeneralPreferences" message="tns:updateGeneralPreferences" />
+      <wsdl:output name="updateGeneralPreferencesResponse" message="tns:updateGeneralPreferencesResponse" />
+      <wsdl:fault name="APIException" message="tns:APIException" />
+    </wsdl:operation>
+    <wsdl:operation name="depositFundsPOLi">
+      <wsdl:input name="depositFundsPOLi" message="tns:depositFundsPOLi" />
+      <wsdl:output name="depositFundsPOLiResponse" message="tns:depositFundsPOLiResponse" />
+      <wsdl:fault name="APIException" message="tns:APIException" />
+    </wsdl:operation>
+    <wsdl:operation name="getAccountStatement">
+      <wsdl:input name="getAccountStatement" message="tns:getAccountStatement" />
+      <wsdl:output name="getAccountStatementResponse" message="tns:getAccountStatementResponse" />
+      <wsdl:fault name="APIException" message="tns:APIException" />
+    </wsdl:operation>
+    <wsdl:operation name="checkCreditCardEnrolment">
+      <wsdl:input name="checkCreditCardEnrolment" message="tns:checkCreditCardEnrolment" />
+      <wsdl:output name="checkCreditCardEnrolmentResponse" message="tns:checkCreditCardEnrolmentResponse" />
+      <wsdl:fault name="APIException" message="tns:APIException" />
+    </wsdl:operation>
+    <wsdl:operation name="createPaymentGatewaySession">
+      <wsdl:input name="createPaymentGatewaySession" message="tns:createPaymentGatewaySession" />
+      <wsdl:output name="createPaymentGatewaySessionResponse" message="tns:createPaymentGatewaySessionResponse" />
+      <wsdl:fault name="APIException" message="tns:APIException" />
+    </wsdl:operation>
+    <wsdl:operation name="getPromoAndBBCount">
+      <wsdl:input name="getPromoAndBBCount" message="tns:getPromoAndBBCount" />
+      <wsdl:output name="getPromoAndBBCountResponse" message="tns:getPromoAndBBCountResponse" />
+      <wsdl:fault name="APIException" message="tns:APIException" />
+    </wsdl:operation>
+    <wsdl:operation name="getPoliTransaction">
+      <wsdl:input name="getPoliTransaction" message="tns:getPoliTransaction" />
+      <wsdl:output name="getPoliTransactionResponse" message="tns:getPoliTransactionResponse" />
+      <wsdl:fault name="APIException" message="tns:APIException" />
+    </wsdl:operation>
+    <wsdl:operation name="changePassword">
+      <wsdl:input name="changePassword" message="tns:changePassword" />
+      <wsdl:output name="changePasswordResponse" message="tns:changePasswordResponse" />
+      <wsdl:fault name="APIException" message="tns:APIException" />
+    </wsdl:operation>
+    <wsdl:operation name="getCurrencyConversionRate">
+      <wsdl:input name="getCurrencyConversionRate" message="tns:getCurrencyConversionRate" />
+      <wsdl:output name="getCurrencyConversionRateResponse" message="tns:getCurrencyConversionRateResponse" />
+      <wsdl:fault name="APIException" message="tns:APIException" />
+    </wsdl:operation>
+    <wsdl:operation name="getAccountBalance">
+      <wsdl:input name="getAccountBalance" message="tns:getAccountBalance" />
+      <wsdl:output name="getAccountBalanceResponse" message="tns:getAccountBalanceResponse" />
+      <wsdl:fault name="APIException" message="tns:APIException" />
+    </wsdl:operation>
+    <wsdl:operation name="withdrawFunds">
+      <wsdl:input name="withdrawFunds" message="tns:withdrawFunds" />
+      <wsdl:output name="withdrawFundsResponse" message="tns:withdrawFundsResponse" />
+      <wsdl:fault name="APIException" message="tns:APIException" />
+    </wsdl:operation>
+    <wsdl:operation name="activateAccount">
+      <wsdl:input name="activateAccount" message="tns:activateAccount" />
+      <wsdl:output name="activateAccountResponse" message="tns:activateAccountResponse" />
+      <wsdl:fault name="APIException" message="tns:APIException" />
+    </wsdl:operation>
+    <wsdl:operation name="getGeneralAccountPreferences">
+      <wsdl:input name="getGeneralAccountPreferences" message="tns:getGeneralAccountPreferences" />
+      <wsdl:output name="getGeneralAccountPreferencesResponse" message="tns:getGeneralAccountPreferencesResponse" />
+      <wsdl:fault name="APIException" message="tns:APIException" />
+    </wsdl:operation>
+    <wsdl:operation name="depositFunds">
+      <wsdl:input name="depositFunds" message="tns:depositFunds" />
+      <wsdl:output name="depositFundsResponse" message="tns:depositFundsResponse" />
+      <wsdl:fault name="APIException" message="tns:APIException" />
+    </wsdl:operation>
+    <wsdl:operation name="getRecentStatements">
+      <wsdl:input name="getRecentStatements" message="tns:getRecentStatements" />
+      <wsdl:output name="getRecentStatementsResponse" message="tns:getRecentStatementsResponse" />
+      <wsdl:fault name="APIException" message="tns:APIException" />
+    </wsdl:operation>
+    <wsdl:operation name="removeCreditCard">
+      <wsdl:input name="removeCreditCard" message="tns:removeCreditCard" />
+      <wsdl:output name="removeCreditCardResponse" message="tns:removeCreditCardResponse" />
+      <wsdl:fault name="APIException" message="tns:APIException" />
+    </wsdl:operation>
+    <wsdl:operation name="getAccountSummary">
+      <wsdl:input name="getAccountSummary" message="tns:getAccountSummary" />
+      <wsdl:output name="getAccountSummaryResponse" message="tns:getAccountSummaryResponse" />
+      <wsdl:fault name="APIException" message="tns:APIException" />
+    </wsdl:operation>
+    <wsdl:operation name="validatePromoCode">
+      <wsdl:input name="validatePromoCode" message="tns:validatePromoCode" />
+      <wsdl:output name="validatePromoCodeResponse" message="tns:validatePromoCodeResponse" />
+      <wsdl:fault name="APIException" message="tns:APIException" />
+    </wsdl:operation>
+    <wsdl:operation name="getRaceBetPreferences">
+      <wsdl:input name="getRaceBetPreferences" message="tns:getRaceBetPreferences" />
+      <wsdl:output name="getRaceBetPreferencesResponse" message="tns:getRaceBetPreferencesResponse" />
+      <wsdl:fault name="APIException" message="tns:APIException" />
+    </wsdl:operation>
+    <wsdl:operation name="closeAccount">
+      <wsdl:input name="closeAccount" message="tns:closeAccount" />
+      <wsdl:output name="closeAccountResponse" message="tns:closeAccountResponse" />
+      <wsdl:fault name="APIException" message="tns:APIException" />
+    </wsdl:operation>
+    <wsdl:operation name="acknowledgeMyTab">
+      <wsdl:input name="acknowledgeMyTab" message="tns:acknowledgeMyTab" />
+      <wsdl:output name="acknowledgeMyTabResponse" message="tns:acknowledgeMyTabResponse" />
+      <wsdl:fault name="APIException" message="tns:APIException" />
+    </wsdl:operation>
+    <wsdl:operation name="getRedemptionHistory">
+      <wsdl:input name="getRedemptionHistory" message="tns:getRedemptionHistory" />
+      <wsdl:output name="getRedemptionHistoryResponse" message="tns:getRedemptionHistoryResponse" />
+      <wsdl:fault name="APIException" message="tns:APIException" />
+    </wsdl:operation>
+    <wsdl:operation name="getAccountDetails">
+      <wsdl:input name="getAccountDetails" message="tns:getAccountDetails" />
+      <wsdl:output name="getAccountDetailsResponse" message="tns:getAccountDetailsResponse" />
+      <wsdl:fault name="APIException" message="tns:APIException" />
+    </wsdl:operation>
+    <wsdl:operation name="validateAccount">
+      <wsdl:input name="validateAccount" message="tns:validateAccount" />
+      <wsdl:output name="validateAccountResponse" message="tns:validateAccountResponse" />
+      <wsdl:fault name="APIException" message="tns:APIException" />
+    </wsdl:operation>
+    <wsdl:operation name="saveCreditCardDetails">
+      <wsdl:input name="saveCreditCardDetails" message="tns:saveCreditCardDetails" />
+      <wsdl:output name="saveCreditCardDetailsResponse" message="tns:saveCreditCardDetailsResponse" />
+      <wsdl:fault name="APIException" message="tns:APIException" />
+    </wsdl:operation>
+    <wsdl:operation name="forgotPassword">
+      <wsdl:input name="forgotPassword" message="tns:forgotPassword" />
+      <wsdl:output name="forgotPasswordResponse" message="tns:forgotPasswordResponse" />
+      <wsdl:fault name="APIException" message="tns:APIException" />
+    </wsdl:operation>
+    <wsdl:operation name="updateCreditCardDetails">
+      <wsdl:input name="updateCreditCardDetails" message="tns:updateCreditCardDetails" />
+      <wsdl:output name="updateCreditCardDetailsResponse" message="tns:updateCreditCardDetailsResponse" />
+      <wsdl:fault name="APIException" message="tns:APIException" />
+    </wsdl:operation>
+    <wsdl:operation name="updateRaceBetPref">
+      <wsdl:input name="updateRaceBetPref" message="tns:updateRaceBetPref" />
+      <wsdl:output name="updateRaceBetPrefResponse" message="tns:updateRaceBetPrefResponse" />
+      <wsdl:fault name="APIException" message="tns:APIException" />
+    </wsdl:operation>
+    <wsdl:operation name="verifyPCLLimit">
+      <wsdl:input name="verifyPCLLimit" message="tns:verifyPCLLimit" />
+      <wsdl:output name="verifyPCLLimitResponse" message="tns:verifyPCLLimitResponse" />
+      <wsdl:fault name="APIException" message="tns:APIException" />
+    </wsdl:operation>
+    <wsdl:operation name="validateCustomerName">
+      <wsdl:input name="validateCustomerName" message="tns:validateCustomerName" />
+      <wsdl:output name="validateCustomerNameResponse" message="tns:validateCustomerNameResponse" />
+      <wsdl:fault name="APIException" message="tns:APIException" />
+    </wsdl:operation>
+    <wsdl:operation name="validateCloseAccount">
+      <wsdl:input name="validateCloseAccount" message="tns:validateCloseAccount" />
+      <wsdl:output name="validateCloseAccountResponse" message="tns:validateCloseAccountResponse" />
+      <wsdl:fault name="APIException" message="tns:APIException" />
+    </wsdl:operation>
+    <wsdl:operation name="redeemPromotion">
+      <wsdl:input name="redeemPromotion" message="tns:redeemPromotion" />
+      <wsdl:output name="redeemPromotionResponse" message="tns:redeemPromotionResponse" />
+      <wsdl:fault name="APIException" message="tns:APIException" />
+    </wsdl:operation>
+    <wsdl:operation name="getOpenTicketCount">
+      <wsdl:input name="getOpenTicketCount" message="tns:getOpenTicketCount" />
+      <wsdl:output name="getOpenTicketCountResponse" message="tns:getOpenTicketCountResponse" />
+      <wsdl:fault name="APIException" message="tns:APIException" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="accountManagementSoapBinding" type="tns:AccountMgmtService">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="initPoliTransaction">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="initPoliTransaction">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="initPoliTransactionResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="APIException">
+        <soap:fault use="literal" name="APIException" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="updateAccountDetails">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="updateAccountDetails">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="updateAccountDetailsResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="APIException">
+        <soap:fault use="literal" name="APIException" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="createAccount">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="createAccount">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="createAccountResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="APIException">
+        <soap:fault use="literal" name="APIException" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="getAvailablePromotions">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="getAvailablePromotions">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="getAvailablePromotionsResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="APIException">
+        <soap:fault use="literal" name="APIException" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="registerCreditCard">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="registerCreditCard">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="registerCreditCardResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="APIException">
+        <soap:fault use="literal" name="APIException" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="getChallengeQuestion">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="getChallengeQuestion">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="getChallengeQuestionResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="APIException">
+        <soap:fault use="literal" name="APIException" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="updateGeneralPreferences">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="updateGeneralPreferences">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="updateGeneralPreferencesResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="APIException">
+        <soap:fault use="literal" name="APIException" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="depositFundsPOLi">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="depositFundsPOLi">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="depositFundsPOLiResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="APIException">
+        <soap:fault use="literal" name="APIException" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="getAccountStatement">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="getAccountStatement">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="getAccountStatementResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="APIException">
+        <soap:fault use="literal" name="APIException" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="checkCreditCardEnrolment">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="checkCreditCardEnrolment">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="checkCreditCardEnrolmentResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="APIException">
+        <soap:fault use="literal" name="APIException" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="createPaymentGatewaySession">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="createPaymentGatewaySession">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="createPaymentGatewaySessionResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="APIException">
+        <soap:fault use="literal" name="APIException" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="getPromoAndBBCount">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="getPromoAndBBCount">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="getPromoAndBBCountResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="APIException">
+        <soap:fault use="literal" name="APIException" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="getPoliTransaction">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="getPoliTransaction">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="getPoliTransactionResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="APIException">
+        <soap:fault use="literal" name="APIException" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="changePassword">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="changePassword">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="changePasswordResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="APIException">
+        <soap:fault use="literal" name="APIException" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="getCurrencyConversionRate">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="getCurrencyConversionRate">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="getCurrencyConversionRateResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="APIException">
+        <soap:fault use="literal" name="APIException" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="getAccountBalance">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="getAccountBalance">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="getAccountBalanceResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="APIException">
+        <soap:fault use="literal" name="APIException" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="activateAccount">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="activateAccount">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="activateAccountResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="APIException">
+        <soap:fault use="literal" name="APIException" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="withdrawFunds">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="withdrawFunds">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="withdrawFundsResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="APIException">
+        <soap:fault use="literal" name="APIException" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="depositFunds">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="depositFunds">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="depositFundsResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="APIException">
+        <soap:fault use="literal" name="APIException" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="getGeneralAccountPreferences">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="getGeneralAccountPreferences">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="getGeneralAccountPreferencesResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="APIException">
+        <soap:fault use="literal" name="APIException" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="getRecentStatements">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="getRecentStatements">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="getRecentStatementsResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="APIException">
+        <soap:fault use="literal" name="APIException" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="getAccountSummary">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="getAccountSummary">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="getAccountSummaryResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="APIException">
+        <soap:fault use="literal" name="APIException" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="removeCreditCard">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="removeCreditCard">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="removeCreditCardResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="APIException">
+        <soap:fault use="literal" name="APIException" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="closeAccount">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="closeAccount">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="closeAccountResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="APIException">
+        <soap:fault use="literal" name="APIException" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="getRaceBetPreferences">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="getRaceBetPreferences">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="getRaceBetPreferencesResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="APIException">
+        <soap:fault use="literal" name="APIException" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="validatePromoCode">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="validatePromoCode">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="validatePromoCodeResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="APIException">
+        <soap:fault use="literal" name="APIException" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="acknowledgeMyTab">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="acknowledgeMyTab">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="acknowledgeMyTabResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="APIException">
+        <soap:fault use="literal" name="APIException" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="getAccountDetails">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="getAccountDetails">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="getAccountDetailsResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="APIException">
+        <soap:fault use="literal" name="APIException" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="getRedemptionHistory">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="getRedemptionHistory">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="getRedemptionHistoryResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="APIException">
+        <soap:fault use="literal" name="APIException" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="validateAccount">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="validateAccount">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="validateAccountResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="APIException">
+        <soap:fault use="literal" name="APIException" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="forgotPassword">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="forgotPassword">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="forgotPasswordResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="APIException">
+        <soap:fault use="literal" name="APIException" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="saveCreditCardDetails">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="saveCreditCardDetails">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="saveCreditCardDetailsResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="APIException">
+        <soap:fault use="literal" name="APIException" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="updateCreditCardDetails">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="updateCreditCardDetails">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="updateCreditCardDetailsResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="APIException">
+        <soap:fault use="literal" name="APIException" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="updateRaceBetPref">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="updateRaceBetPref">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="updateRaceBetPrefResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="APIException">
+        <soap:fault use="literal" name="APIException" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="validateCustomerName">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="validateCustomerName">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="validateCustomerNameResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="APIException">
+        <soap:fault use="literal" name="APIException" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="verifyPCLLimit">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="verifyPCLLimit">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="verifyPCLLimitResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="APIException">
+        <soap:fault use="literal" name="APIException" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="validateCloseAccount">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="validateCloseAccount">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="validateCloseAccountResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="APIException">
+        <soap:fault use="literal" name="APIException" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="getOpenTicketCount">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="getOpenTicketCount">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="getOpenTicketCountResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="APIException">
+        <soap:fault use="literal" name="APIException" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="redeemPromotion">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="redeemPromotion">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="redeemPromotionResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="APIException">
+        <soap:fault use="literal" name="APIException" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="accountManagement">
+    <wsdl:port name="AccountMgmtServiceImplPort" binding="tns:accountManagementSoapBinding">
+      <soap:address location="https://api.tab.com.au/tabapi/services/accountManagement" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

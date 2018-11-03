@@ -1,0 +1,1072 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{E31BE915-0DAF-496E-A2CE-BAA95A483CCB}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>TheMinx</RootNamespace>
+    <AssemblyName>TheMinx</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+    <IsWebBootstrapper>true</IsWebBootstrapper>
+    <PublishUrl>http://puppy.infocore.com.au/TheMinx/</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Web</InstallFrom>
+    <UpdateEnabled>true</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>false</MapFileExtensions>
+    <SupportUrl>http://www.infocore.com.au</SupportUrl>
+    <ErrorReportUrl>http://www.infocore.com.au</ErrorReportUrl>
+    <ProductName>The Minx</ProductName>
+    <PublisherName>Infocore Pty. Ltd.</PublisherName>
+    <SuiteName>The Minx</SuiteName>
+    <WebPage>publish.htm</WebPage>
+    <OpenBrowserOnPublish>false</OpenBrowserOnPublish>
+    <ApplicationRevision>40</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>true</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>1CF33AB2286432E2619F43C7994DD657C3456FCF</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>TheMinx_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>false</SignManifests>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="ComponentFactory.Krypton.Toolkit">
+      <HintPath>C:\Users\gliu\Downloads\TheMinx\ComponentFactory.Krypton.Toolkit.dll</HintPath>
+    </Reference>
+    <Reference Include="MetroFramework">
+      <HintPath>..\packages\ModernUI.1.1.0.1\lib\net45\MetroFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL" />
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.6.0.6\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Telerik.Reporting, Version=8.1.14.804, Culture=neutral, PublicKeyToken=a9d7983dfcc261be, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Telerik.ReportViewer.WinForms, Version=8.1.14.804, Culture=neutral, PublicKeyToken=a9d7983dfcc261be, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Telerik.WinControls, Version=2014.3.1021.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL" />
+    <Reference Include="Telerik.WinControls.GridView, Version=2014.3.1021.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL" />
+    <Reference Include="Telerik.WinControls.UI, Version=2014.3.1021.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL" />
+    <Reference Include="TelerikCommon, Version=2014.3.1021.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL" />
+    <Reference Include="TelerikData, Version=2014.3.1021.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="About.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="About.Designer.cs">
+      <DependentUpon>About.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Bet.cs" />
+    <Compile Include="BetResults.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BetResults.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="frmBetResults.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmBetResults.Designer.cs">
+      <DependentUpon>frmBetResults.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmChooseDate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmChooseDate.Designer.cs">
+      <DependentUpon>frmChooseDate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMain.Designer.cs">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmSettings.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSettings.Designer.cs">
+      <DependentUpon>frmSettings.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Globals.cs" />
+    <Compile Include="MessageInspector.cs" />
+    <Compile Include="ParserUtils.cs" />
+    <Compile Include="PriceUpdates.cs" />
+    <Compile Include="ProcessAutoBet.cs" />
+    <Compile Include="ProcessRace.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Results.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Results.Designer.cs">
+      <DependentUpon>Results.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Results_Report.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Results_Report.Designer.cs">
+      <DependentUpon>Results_Report.cs</DependentUpon>
+    </Compile>
+    <Compile Include="rptResults.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="rptResults.Designer.cs">
+      <DependentUpon>rptResults.cs</DependentUpon>
+    </Compile>
+    <Compile Include="rptTest.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="rptTest.Designer.cs">
+      <DependentUpon>rptTest.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RunningRace.cs" />
+    <Compile Include="Service References\wsTabAccount\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\wsTabAuth\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\wsTabBetting\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\wsTabRacing\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Settings.cs" />
+    <Compile Include="SQLHelper.cs" />
+    <Compile Include="Tatts\Data\Racing\ConfigurationEndPoint.cs" />
+    <Compile Include="Tatts\Data\Racing\Dividend.cs" />
+    <Compile Include="Tatts\Data\Racing\DividendResult.cs" />
+    <Compile Include="Tatts\Data\Racing\Leg.cs" />
+    <Compile Include="Tatts\Data\Racing\Meeting.cs" />
+    <Compile Include="Tatts\Data\Racing\MeetingSummary.cs" />
+    <Compile Include="Tatts\Data\Racing\Pool.cs" />
+    <Compile Include="Tatts\Data\Racing\Race.cs" />
+    <Compile Include="Tatts\Data\Racing\RaceDay.cs" />
+    <Compile Include="Tatts\Data\Racing\Result.cs" />
+    <Compile Include="Tatts\Data\Racing\Runner.cs" />
+    <Compile Include="Tatts\Data\Racing\Tip.cs" />
+    <Compile Include="Tatts\Data\Requests\ChangePasswordRequest.cs" />
+    <Compile Include="Tatts\Data\Requests\ConfigurationRequest.cs" />
+    <Compile Include="Tatts\Data\Requests\CreditCardDepositRequest.cs" />
+    <Compile Include="Tatts\Data\Requests\FixedPriceRequest.cs" />
+    <Compile Include="Tatts\Data\Requests\LogonRequest.cs" />
+    <Compile Include="Tatts\Data\Requests\OutletSearchRequest.cs" />
+    <Compile Include="Tatts\Data\Requests\RaceDetailsRequest.cs" />
+    <Compile Include="Tatts\Data\Requests\TattsBalanceRequest.cs" />
+    <Compile Include="Tatts\Data\Requests\ToteBetRequest.cs" />
+    <Compile Include="Tatts\Data\Requests\TransactionRequest.cs" />
+    <Compile Include="Tatts\Data\Responses\Balance.cs" />
+    <Compile Include="Tatts\Data\Responses\Company.cs" />
+    <Compile Include="Tatts\Data\Responses\ConfigurationResponse.cs" />
+    <Compile Include="Tatts\Data\Responses\CustomerSession.cs" />
+    <Compile Include="Tatts\Data\Responses\DataResponse.cs" />
+    <Compile Include="Tatts\Data\Responses\ErrorInfo.cs" />
+    <Compile Include="Tatts\Data\Responses\HistoryRecord.cs" />
+    <Compile Include="Tatts\Data\Responses\LatestHistoryResponse.cs" />
+    <Compile Include="Tatts\Data\Responses\LoginDetails.cs" />
+    <Compile Include="Tatts\Data\Responses\LogonResponse.cs" />
+    <Compile Include="Tatts\Data\Responses\Lotteries.cs" />
+    <Compile Include="Tatts\Data\Responses\Response.cs" />
+    <Compile Include="Tatts\Data\Responses\TABQResponse.cs" />
+    <Compile Include="Tatts\Data\Responses\TattsBalanceResponse.cs" />
+    <Compile Include="Tatts\Data\Responses\TattsOnline.cs" />
+    <Compile Include="Tatts\Data\Responses\ToteBetResponse.cs" />
+    <Compile Include="Tatts\Data\Responses\TransactionResponse.cs" />
+    <Compile Include="Tatts\Data\Responses\Wagering.cs" />
+    <Compile Include="Tatts\Data\Sports\League.cs" />
+    <Compile Include="Tatts\Data\Sports\MainEvent.cs" />
+    <Compile Include="Tatts\Data\Sports\Meeting.cs" />
+    <Compile Include="Tatts\Data\Sports\Offer.cs" />
+    <Compile Include="Tatts\Data\Sports\Sport.cs" />
+    <Compile Include="Tatts\Data\Sports\SubEvent.cs" />
+    <Compile Include="Tatts\Data\Tote\ToteBet.cs" />
+    <Compile Include="Tatts\Data\Tote\ToteSelection.cs" />
+    <Compile Include="Tatts\Data\Tote\ToteTicket.cs" />
+    <Compile Include="Tatts\TattsUtils.cs" />
+    <Compile Include="TheMinxDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TheMinxDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="TodaysVenue.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TodaysVenue.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Utils.cs" />
+    <Compile Include="Web References\wsTabAuth1\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="About.resx">
+      <DependentUpon>About.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmBetResults.resx">
+      <DependentUpon>frmBetResults.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmChooseDate.resx">
+      <DependentUpon>frmChooseDate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMain.resx">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSettings.resx">
+      <DependentUpon>frmSettings.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Results.resx">
+      <DependentUpon>Results.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Results_Report.resx">
+      <DependentUpon>Results_Report.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="rptBetResults.rdlc" />
+    <EmbeddedResource Include="rptResults.resx">
+      <DependentUpon>rptResults.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="rptTest.resx">
+      <DependentUpon>rptTest.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="BetResults.xsc">
+      <DependentUpon>BetResults.xsd</DependentUpon>
+    </None>
+    <None Include="BetResults.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>BetResults.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="BetResults.xss">
+      <DependentUpon>BetResults.xsd</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="Service References\wsTabAccount\accountManagement.wsdl" />
+    <None Include="Service References\wsTabAccount\TheMinx.wsTabAccount.accountBalanceResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\wsTabAccount\TheMinx.wsTabAccount.accountStatementResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\wsTabAccount\TheMinx.wsTabAccount.acknowledgementResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\wsTabAccount\TheMinx.wsTabAccount.acknowledgeMyTabResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\wsTabAccount\TheMinx.wsTabAccount.activateAccountResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\wsTabAccount\TheMinx.wsTabAccount.ActivateAccountResponseImpl.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\wsTabAccount\TheMinx.wsTabAccount.authenticateResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\wsTabAccount\TheMinx.wsTabAccount.availablePromotionResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\wsTabAccount\TheMinx.wsTabAccount.boolResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\wsTabAccount\TheMinx.wsTabAccount.challengeQuestionResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\wsTabAccount\TheMinx.wsTabAccount.changePasswordResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\wsTabAccount\TheMinx.wsTabAccount.CheckCreditCardEnrolmentResp.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\wsTabAccount\TheMinx.wsTabAccount.checkCreditCardEnrolmentResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\wsTabAccount\TheMinx.wsTabAccount.closeAccountResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\wsTabAccount\TheMinx.wsTabAccount.CloseAccountResponseImpl.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\wsTabAccount\TheMinx.wsTabAccount.createAccountResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\wsTabAccount\TheMinx.wsTabAccount.CreateAccountResponseImpl.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\wsTabAccount\TheMinx.wsTabAccount.CreatePaymentGatewaySessionResp.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\wsTabAccount\TheMinx.wsTabAccount.createPaymentGatewaySessionResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\wsTabAccount\TheMinx.wsTabAccount.depositFundsPOLiResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\wsTabAccount\TheMinx.wsTabAccount.DepositFundsPOLiResponseImpl.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\wsTabAccount\TheMinx.wsTabAccount.depositFundsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\wsTabAccount\TheMinx.wsTabAccount.DepositFundsResponseImpl.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\wsTabAccount\TheMinx.wsTabAccount.forgotPasswordResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\wsTabAccount\TheMinx.wsTabAccount.getAccountBalanceResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\wsTabAccount\TheMinx.wsTabAccount.getAccountDetailsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\wsTabAccount\TheMinx.wsTabAccount.GetAccountDetailsResponseImpl.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\wsTabAccount\TheMinx.wsTabAccount.getAccountStatementResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\wsTabAccount\TheMinx.wsTabAccount.getAccountSummaryResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\wsTabAccount\TheMinx.wsTabAccount.getAvailablePromotionsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\wsTabAccount\TheMinx.wsTabAccount.getChallengeQuestionResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\wsTabAccount\TheMinx.wsTabAccount.getCurrencyConversionRateResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\wsTabAccount\TheMinx.wsTabAccount.getGeneralAccountPreferencesResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\wsTabAccount\TheMinx.wsTabAccount.getOpenTicketCountResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\wsTabAccount\TheMinx.wsTabAccount.getPoliTransactionResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\wsTabAccount\TheMinx.wsTabAccount.GetPoliTransactionResponseImpl.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\wsTabAccount\TheMinx.wsTabAccount.getPromoAndBBCountResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\wsTabAccount\TheMinx.wsTabAccount.getRaceBetPreferencesResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\wsTabAccount\TheMinx.wsTabAccount.getRecentStatementsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\wsTabAccount\TheMinx.wsTabAccount.getRedemptionHistoryResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\wsTabAccount\TheMinx.wsTabAccount.initiateTransactionResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\wsTabAccount\TheMinx.wsTabAccount.initPoliTransactionResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\wsTabAccount\TheMinx.wsTabAccount.pclLimitResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\wsTabAccount\TheMinx.wsTabAccount.preferenceResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\wsTabAccount\TheMinx.wsTabAccount.promoAndBBCountResp.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\wsTabAccount\TheMinx.wsTabAccount.recentStatementResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\wsTabAccount\TheMinx.wsTabAccount.redeemNowResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\wsTabAccount\TheMinx.wsTabAccount.redeemPromotionResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\wsTabAccount\TheMinx.wsTabAccount.redemptionHistoryResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\wsTabAccount\TheMinx.wsTabAccount.RegisterCreditCardResp.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\wsTabAccount\TheMinx.wsTabAccount.registerCreditCardResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\wsTabAccount\TheMinx.wsTabAccount.RemoveCreditCardResp.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\wsTabAccount\TheMinx.wsTabAccount.removeCreditCardResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\wsTabAccount\TheMinx.wsTabAccount.SaveCreditCardDetailsResp.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\wsTabAccount\TheMinx.wsTabAccount.saveCreditCardDetailsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\wsTabAccount\TheMinx.wsTabAccount.updateAccountDetailsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\wsTabAccount\TheMinx.wsTabAccount.UpdateCreditCardDetailsResp.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\wsTabAccount\TheMinx.wsTabAccount.updateCreditCardDetailsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\wsTabAccount\TheMinx.wsTabAccount.UpdateGeneralPreferencesImpl.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\wsTabAccount\TheMinx.wsTabAccount.updateGeneralPreferencesResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\wsTabAccount\TheMinx.wsTabAccount.updateRaceBetPrefResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\wsTabAccount\TheMinx.wsTabAccount.validateAccountResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\wsTabAccount\TheMinx.wsTabAccount.ValidateAccountResponseImpl.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\wsTabAccount\TheMinx.wsTabAccount.validateCloseAccountResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\wsTabAccount\TheMinx.wsTabAccount.ValidateCustomerNameResp.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\wsTabAccount\TheMinx.wsTabAccount.validateCustomerNameResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\wsTabAccount\TheMinx.wsTabAccount.validatePromoCodeResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\wsTabAccount\TheMinx.wsTabAccount.verifyPCLLimitResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\wsTabAccount\TheMinx.wsTabAccount.withdrawFundsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\wsTabAccount\TheMinx.wsTabAccount.WithdrawFundsResponseImpl.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\wsTabAuth\TheMinx.wsTabAuth.authenticateAccountResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\wsTabAuth\TheMinx.wsTabAuth.thirdPartyCustomerAuthenticateResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\wsTabAuth\thirdPartyAuthenticate.wsdl" />
+    <None Include="Service References\wsTabBetting\betting.wsdl" />
+    <None Include="Service References\wsTabBetting\TheMinx.wsTabBetting.bettingResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\wsTabBetting\TheMinx.wsTabBetting.placeBetResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\wsTabBetting\TheMinx.wsTabBetting.validateBetResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\wsTabRacing\racing.wsdl" />
+    <None Include="Service References\wsTabRacing\TheMinx.wsTabRacing.availableFOBetTypeResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\wsTabRacing\TheMinx.wsTabRacing.big6Response.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\wsTabRacing\TheMinx.wsTabRacing.big6ResultsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\wsTabRacing\TheMinx.wsTabRacing.exoticApproximatesResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\wsTabRacing\TheMinx.wsTabRacing.featuredRaceResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\wsTabRacing\TheMinx.wsTabRacing.fixedOddsFluctuationsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\wsTabRacing\TheMinx.wsTabRacing.fixedOddsFuturesResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\wsTabRacing\TheMinx.wsTabRacing.fixedOddsRacesResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\wsTabRacing\TheMinx.wsTabRacing.getAmendmentsResponse1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\wsTabRacing\TheMinx.wsTabRacing.getAvailableFOBetTypesResponse1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\wsTabRacing\TheMinx.wsTabRacing.getBig6MeetingsResponse1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\wsTabRacing\TheMinx.wsTabRacing.getBig6ResultsResponse1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\wsTabRacing\TheMinx.wsTabRacing.getCurrentBetTypesResponse1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\wsTabRacing\TheMinx.wsTabRacing.getExoticApproximatesResponse1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\wsTabRacing\TheMinx.wsTabRacing.getFeaturedRaceResponse1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\wsTabRacing\TheMinx.wsTabRacing.getFixedOddsFluctuationsResponse1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\wsTabRacing\TheMinx.wsTabRacing.getFixedOddsFuturesResponse1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\wsTabRacing\TheMinx.wsTabRacing.getFixedOddsRacesResponse1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\wsTabRacing\TheMinx.wsTabRacing.getJackpotsByBetTypeResponse1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\wsTabRacing\TheMinx.wsTabRacing.getJackpotsResponse1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\wsTabRacing\TheMinx.wsTabRacing.getMarketMoversResponse1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\wsTabRacing\TheMinx.wsTabRacing.getMeetingDetailsForRaceNosResponse1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\wsTabRacing\TheMinx.wsTabRacing.getMeetingDetailsResponse1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\wsTabRacing\TheMinx.wsTabRacing.getMeetingsByBetTypeResponse1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\wsTabRacing\TheMinx.wsTabRacing.getMeetingsResponse1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\wsTabRacing\TheMinx.wsTabRacing.getMultilegApproximatesResponse1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\wsTabRacing\TheMinx.wsTabRacing.getNextToGoRacesResponse1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\wsTabRacing\TheMinx.wsTabRacing.getRaceAdditionalDetailsResponse1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\wsTabRacing\TheMinx.wsTabRacing.getRaceDetailsV2Response1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\wsTabRacing\TheMinx.wsTabRacing.getRacingAToZListResponse1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\wsTabRacing\TheMinx.wsTabRacing.getRacingBetTypesResponse1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\wsTabRacing\TheMinx.wsTabRacing.getRacingCalendarResponse1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\wsTabRacing\TheMinx.wsTabRacing.getRacingEventsForBlackBookResponse1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\wsTabRacing\TheMinx.wsTabRacing.getRacingFixedOddsResultsSummaryResponse1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\wsTabRacing\TheMinx.wsTabRacing.getRacingOddsTrendsResponse1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\wsTabRacing\TheMinx.wsTabRacing.getRacingResultsSummaryResponse1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\wsTabRacing\TheMinx.wsTabRacing.getRacingScheduleResponse1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\wsTabRacing\TheMinx.wsTabRacing.getRacingSearchResultsSummaryResponse1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\wsTabRacing\TheMinx.wsTabRacing.getRacingSummaryV2Response1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\wsTabRacing\TheMinx.wsTabRacing.getRacingUpcomingEventsSearchResultsResponse1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\wsTabRacing\TheMinx.wsTabRacing.getResultedFixedOddsRaceDetailsResponse1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\wsTabRacing\TheMinx.wsTabRacing.getResultedRaceDetailsResponse1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\wsTabRacing\TheMinx.wsTabRacing.getResultedRacingSummaryResponse1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\wsTabRacing\TheMinx.wsTabRacing.getScratchingsResponse1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\wsTabRacing\TheMinx.wsTabRacing.getTodaysJackpotsResponse1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\wsTabRacing\TheMinx.wsTabRacing.getTrackResponse1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\wsTabRacing\TheMinx.wsTabRacing.getWeatherInfoResponse1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\wsTabRacing\TheMinx.wsTabRacing.getYesterdayResultsResponse1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\wsTabRacing\TheMinx.wsTabRacing.jackpotResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\wsTabRacing\TheMinx.wsTabRacing.jackpotResponseGroupedByBetType.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\wsTabRacing\TheMinx.wsTabRacing.marketMoversResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\wsTabRacing\TheMinx.wsTabRacing.meetingDetailsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\wsTabRacing\TheMinx.wsTabRacing.meetingsByBetTypeResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\wsTabRacing\TheMinx.wsTabRacing.meetingsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\wsTabRacing\TheMinx.wsTabRacing.multilegApproximatesResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\wsTabRacing\TheMinx.wsTabRacing.nextToGoRacesResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\wsTabRacing\TheMinx.wsTabRacing.raceAdditionalDetailResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\wsTabRacing\TheMinx.wsTabRacing.raceCurrentBetTypesResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\wsTabRacing\TheMinx.wsTabRacing.raceDetailsResponseV2.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\wsTabRacing\TheMinx.wsTabRacing.racingAmendmentResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\wsTabRacing\TheMinx.wsTabRacing.racingAToZListResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\wsTabRacing\TheMinx.wsTabRacing.racingBetTypesResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\wsTabRacing\TheMinx.wsTabRacing.racingCalendarResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\wsTabRacing\TheMinx.wsTabRacing.racingEventsForBlackBookResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\wsTabRacing\TheMinx.wsTabRacing.racingFixedOddsResultsSummaryResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\wsTabRacing\TheMinx.wsTabRacing.racingOddsTrendsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\wsTabRacing\TheMinx.wsTabRacing.racingResultsSummaryResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\wsTabRacing\TheMinx.wsTabRacing.racingScheduleResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\wsTabRacing\TheMinx.wsTabRacing.racingScratchedResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\wsTabRacing\TheMinx.wsTabRacing.racingSearchResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\wsTabRacing\TheMinx.wsTabRacing.racingSummaryResponseV2.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\wsTabRacing\TheMinx.wsTabRacing.racingUpcomingEventsSearchResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\wsTabRacing\TheMinx.wsTabRacing.resultedFixedOddsRaceDetailsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\wsTabRacing\TheMinx.wsTabRacing.resultedRaceDetailsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\wsTabRacing\TheMinx.wsTabRacing.resultedRacingSummaryResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\wsTabRacing\TheMinx.wsTabRacing.todaysJackpotResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\wsTabRacing\TheMinx.wsTabRacing.trackResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\wsTabRacing\TheMinx.wsTabRacing.weatherInfoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\wsTabRacing\TheMinx.wsTabRacing.yesterdayResultResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="TheMinxDataSet.xsc">
+      <DependentUpon>TheMinxDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="TheMinxDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>TheMinxDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="TheMinxDataSet.xss">
+      <DependentUpon>TheMinxDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="TheMinx_TemporaryKey.pfx" />
+    <None Include="TodaysVenue.xsc">
+      <DependentUpon>TodaysVenue.xsd</DependentUpon>
+    </None>
+    <None Include="TodaysVenue.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>TodaysVenue.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="TodaysVenue.xss">
+      <DependentUpon>TodaysVenue.xsd</DependentUpon>
+    </None>
+    <None Include="Web References\wsTabAuth1\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\wsTabAuth1\thirdPartyAuthenticate.wsdl" />
+    <None Include="Web References\wsTabAuth1\thirdPartyCustomerAuthenticateResponse.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\wsTabRacing\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\wsTabRacing\configuration.svcinfo" />
+    <None Include="Service References\wsTabRacing\configuration91.svcinfo" />
+    <None Include="Service References\wsTabBetting\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\wsTabBetting\configuration.svcinfo" />
+    <None Include="Service References\wsTabBetting\configuration91.svcinfo" />
+    <None Include="Service References\wsTabAuth\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\wsTabAuth\configuration.svcinfo" />
+    <None Include="Service References\wsTabAuth\configuration91.svcinfo" />
+    <None Include="Service References\wsTabAccount\configuration91.svcinfo" />
+    <None Include="Service References\wsTabAccount\configuration.svcinfo" />
+    <None Include="Service References\wsTabAccount\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Service References\wsTabAccount\" />
+    <WCFMetadataStorage Include="Service References\wsTabAuth\" />
+    <WCFMetadataStorage Include="Service References\wsTabBetting\" />
+    <WCFMetadataStorage Include="Service References\wsTabRacing\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\LumenWorks.Framework.IO\LumenWorks.Framework.IO.csproj">
+      <Project>{e3b83d68-c90c-4874-8e5f-dec8d038bc7c}</Project>
+      <Name>LumenWorks.Framework.IO</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ProgressIndicator\ProgressIndicator.csproj">
+      <Project>{f7fe2ce9-344c-4b46-8b04-083d68fe1c16}</Project>
+      <Name>ProgressIndicator</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferences Include="Web References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferenceUrl Include="https://www.tab.com.au/tabapi/services/thirdPartyAuthenticate%3fWSDL">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\wsTabAuth1\</RelPath>
+      <UpdateFromURL>https://www.tab.com.au/tabapi/services/thirdPartyAuthenticate%3fWSDL</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>TheMinx_wsTabAuth1_thirdPartyAuthenticate</CachedSettingsPropName>
+    </WebReferenceUrl>
+  </ItemGroup>
+  <ItemGroup>
+    <PublishFile Include="ComponentFactory.Krypton.Toolkit">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="Microsoft.ReportViewer.Common">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="Microsoft.ReportViewer.DataVisualization">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="Microsoft.ReportViewer.ProcessingObjectModel">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="Microsoft.ReportViewer.WinForms">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="Microsoft.SqlServer.Types">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="Telerik.Reporting">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="Telerik.ReportViewer.WinForms">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="Telerik.WinControls">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="Telerik.WinControls.GridView">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="Telerik.WinControls.UI">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="TelerikCommon">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="TelerikData">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.5">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.5 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.SqlServer.Express.11.0">
+      <Visible>False</Visible>
+      <ProductName>SQL Server 2012 Express</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="x64\SQLite.Interop.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="x86\SQLite.Interop.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

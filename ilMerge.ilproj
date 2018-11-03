@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Settings>
+  <!--Switches-->
+  <CopyAttributes Enabled="true" />
+  <UnionDuplicates Enabled="false" />
+  <Debug Enabled="1" />
+  <Internalize Enabled="false" />
+  <MergeXml Enabled="false" />
+  <!--Signing-->
+  <Sign Enabled="false" Delay="false"></Sign>
+  <!--Logging-->
+  <Log Enabled="false"></Log>
+  <!--Assemblies-->
+  <Assemblies>
+    <Assembly>D:\OneDrive\Visual Studio 2012\Projects\Racing\TheMinx\TheMinx\bin\Release\TheMinx.exe</Assembly>
+    <Assembly>D:\OneDrive\Visual Studio 2012\Projects\Racing\TheMinx\TheMinx\bin\Release\Telerik.Reporting.dll</Assembly>
+    <Assembly>D:\OneDrive\Visual Studio 2012\Projects\Racing\TheMinx\TheMinx\bin\Release\Telerik.ReportViewer.WinForms.dll</Assembly>
+    <Assembly>D:\OneDrive\Visual Studio 2012\Projects\Racing\TheMinx\TheMinx\bin\Release\Telerik.WinControls.dll</Assembly>
+    <Assembly>D:\OneDrive\Visual Studio 2012\Projects\Racing\TheMinx\TheMinx\bin\Release\Telerik.WinControls.GridView.dll</Assembly>
+    <Assembly>D:\OneDrive\Visual Studio 2012\Projects\Racing\TheMinx\TheMinx\bin\Release\Telerik.WinControls.UI.dll</Assembly>
+    <Assembly>D:\OneDrive\Visual Studio 2012\Projects\Racing\TheMinx\TheMinx\bin\Release\TelerikCommon.dll</Assembly>
+    <Assembly>D:\OneDrive\Visual Studio 2012\Projects\Racing\TheMinx\TheMinx\bin\Release\TelerikData.dll</Assembly>
+    <Primary>D:\OneDrive\Visual Studio 2012\Projects\Racing\TheMinx\TheMinx\bin\Release\TheMinx.exe</Primary>
+  </Assemblies>
+  <!--Output-->
+  <OutputAssembly>\\WINDOWS10\Temp\TheMinx.exe</OutputAssembly>
+  <!--.NET Framework-->
+  <Framework>.NET Framework 4.5 Client</Framework>
+  <!--Merge Engine-->
+  <Engine Name="ILMerge" />
+</Settings>

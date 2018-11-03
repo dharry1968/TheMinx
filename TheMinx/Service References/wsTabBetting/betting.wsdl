@@ -1,0 +1,260 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tns="http://service.betting.api.neo.tabcorp.com.au/" xmlns:ns1="http://schemas.xmlsoap.org/soap/http" name="betting" targetNamespace="http://service.betting.api.neo.tabcorp.com.au/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xs:schema attributeFormDefault="unqualified" elementFormDefault="unqualified" targetNamespace="http://service.betting.api.neo.tabcorp.com.au/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+      <xs:element name="placeBet" type="tns:placeBet" />
+      <xs:element name="placeBetResponse" type="tns:placeBetResponse" />
+      <xs:element name="validateBet" type="tns:validateBet" />
+      <xs:element name="validateBetResponse" type="tns:validateBetResponse" />
+      <xs:complexType name="validateBet">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="apiMeta" type="tns:apiMeta" />
+          <xs:element minOccurs="0" name="bettingRequest" type="tns:bettingRequest" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="apiMeta">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="deviceId" type="xs:long" />
+          <xs:element name="jurisdictionId" type="xs:long" />
+          <xs:element minOccurs="0" name="requestChannel" type="xs:long" />
+          <xs:element minOccurs="0" name="usernamePasswordToken" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="bettingRequest">
+        <xs:sequence>
+          <xs:element name="accountPin" type="xs:long" />
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="betDetailsRequestList" nillable="true" type="tns:betDetailsReq" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="betDetailsReq">
+        <xs:sequence>
+          <xs:element name="acceptPartial" type="xs:int" />
+          <xs:element name="accumulatorBet" type="xs:boolean" />
+          <xs:element name="accumulatorId" type="xs:short" />
+          <xs:element minOccurs="0" name="allUpFormula" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="betAmountList" nillable="true" type="tns:betAmount" />
+          <xs:element name="betRefId" type="xs:long" />
+          <xs:element minOccurs="0" name="betType" type="xs:string" />
+          <xs:element name="scheduledType" type="xs:int" />
+          <xs:element name="fixedOddsProdCode" type="xs:int" />
+          <xs:element name="flexiBet" type="xs:boolean" />
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="legList" nillable="true" type="tns:legDetailsReq" />
+          <xs:element minOccurs="0" name="meetingDate" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="multiParlayFormula" type="xs:string" />
+          <xs:element name="mystery" type="xs:boolean" />
+          <xs:element name="notifyMethod" type="xs:int" />
+          <xs:element name="numMultiParlayBet" type="xs:int" />
+          <xs:element name="ordinalNumber" type="xs:long" />
+          <xs:element name="meetingCode" type="xs:int" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="betAmount">
+        <xs:sequence>
+          <xs:element name="amountInvested" type="xs:double" />
+          <xs:element minOccurs="0" name="returnsPerBet" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="legDetailsReq">
+        <xs:sequence>
+          <xs:element name="prodCode" type="xs:int" />
+          <xs:element name="propositionNumber" type="xs:long" />
+          <xs:element name="raceNumber" type="xs:int" />
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="selectionList" nillable="true" type="tns:betSelection" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="betSelection">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="selectionName" type="xs:string" />
+          <xs:element minOccurs="0" name="selectionNumber" type="xs:string" />
+          <xs:element minOccurs="0" name="selectionSeparator" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="validateBetResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="return" type="tns:bettingResponse" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="bettingResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="accountId" type="xs:long" />
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="betDetailsResponseList" nillable="true" type="tns:betDetailsResp" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="betDetailsResp">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="acceptTimer" type="xs:long" />
+          <xs:element minOccurs="0" name="accountBalance" type="xs:double" />
+          <xs:element minOccurs="0" name="allUpFormula" type="xs:string" />
+          <xs:element minOccurs="0" name="amountCreditBalance" type="xs:double" />
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="amountInvestedList" nillable="true" type="xs:double" />
+          <xs:element minOccurs="0" name="amountSessionBalance" type="xs:double" />
+          <xs:element minOccurs="0" name="amountTicket" type="xs:double" />
+          <xs:element name="amountWithdraw" type="xs:double" />
+          <xs:element minOccurs="0" name="betCostAmount" type="xs:double" />
+          <xs:element name="betRefId" type="xs:long" />
+          <xs:element minOccurs="0" name="betSoldTime" type="xs:dateTime" />
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="comboBetContent" nillable="true" type="tns:comboBetContent" />
+          <xs:element name="scheduledType" type="xs:int" />
+          <xs:element minOccurs="0" name="counterOfferPayout" type="xs:string" />
+          <xs:element minOccurs="0" name="counterOfferReturn" type="xs:string" />
+          <xs:element minOccurs="0" name="counterOfferTake" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="deductDetailsList" nillable="true" type="tns:deductDetailsResp" />
+          <xs:element name="flexiBet" type="xs:boolean" />
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="flexiList" nillable="true" type="tns:flexiResp" />
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="legList" nillable="true" type="tns:legDetailsResp" />
+          <xs:element minOccurs="0" name="meetingDate" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="meetingLocation" type="xs:string" />
+          <xs:element minOccurs="0" name="meetingName" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="multiParlayContentList" nillable="true" type="tns:multiParlayContent" />
+          <xs:element name="mystery" type="xs:boolean" />
+          <xs:element minOccurs="0" name="openBalance" type="xs:double" />
+          <xs:element minOccurs="0" name="overAllPayout" type="xs:string" />
+          <xs:element name="overallStatus" type="xs:int" />
+          <xs:element name="promotionFlag" type="xs:int" />
+          <xs:element minOccurs="0" name="returnsOverall" type="xs:string" />
+          <xs:element minOccurs="0" name="statusCode" type="xs:string" />
+          <xs:element minOccurs="0" name="statusMessage" type="xs:string" />
+          <xs:element minOccurs="0" name="statusType" type="xs:string" />
+          <xs:element minOccurs="0" name="transactionNumber" type="xs:string" />
+          <xs:element minOccurs="0" name="meetingCode" type="xs:int" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="comboBetContent">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="allUpFormula" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="amountInvestedList" nillable="true" type="xs:double" />
+          <xs:element minOccurs="0" name="betCostAmount" type="xs:double" />
+          <xs:element name="scheduledType" type="xs:int" />
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="deductDetailsList" nillable="true" type="tns:deductDetailsResp" />
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="legList" nillable="true" type="tns:legDetailsResp" />
+          <xs:element minOccurs="0" name="meetingDate" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="overallPayout" type="xs:string" />
+          <xs:element name="overallStatus" type="xs:int" />
+          <xs:element minOccurs="0" name="returnsOverall" type="xs:string" />
+          <xs:element minOccurs="0" name="meetingCode" type="xs:int" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="deductDetailsResp">
+        <xs:sequence>
+          <xs:element name="amountPlaceDeduct" type="xs:double" />
+          <xs:element name="amountWinDeduct" type="xs:double" />
+          <xs:element minOccurs="0" name="deductDuration" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="scratchList" nillable="true" type="xs:long" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="legDetailsResp">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="eventDate" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="eventName" type="xs:string" />
+          <xs:element minOccurs="0" name="legStatus" type="xs:string" />
+          <xs:element minOccurs="0" name="prodCode" type="xs:int" />
+          <xs:element minOccurs="0" name="propositionName" type="xs:string" />
+          <xs:element name="propositionNumber" type="xs:long" />
+          <xs:element minOccurs="0" name="raceName" type="xs:string" />
+          <xs:element name="raceNumber" type="xs:int" />
+          <xs:element minOccurs="0" name="raceStartTime" type="xs:dateTime" />
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="selectionList" nillable="true" type="tns:betSelection" />
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="sportsPayoutList" nillable="true" type="tns:sportsPayoutResp" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="sportsPayoutResp">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="projectedPayout" type="xs:string" />
+          <xs:element minOccurs="0" name="sportsBetNumber" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="flexiResp">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="betNumber" type="xs:long" />
+          <xs:element name="payoutPercent" type="xs:double" />
+          <xs:element name="percentBetCombo" type="xs:long" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="multiParlayContent">
+        <xs:sequence>
+          <xs:element name="multiParlayCombinations" type="xs:long" />
+          <xs:element minOccurs="0" name="multiParlayFormula" type="xs:string" />
+          <xs:element name="multiParlayPayout" type="xs:double" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="placeBet">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="apiMeta" type="tns:apiMeta" />
+          <xs:element minOccurs="0" name="bettingRequest" type="tns:bettingRequest" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="placeBetResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="return" type="tns:bettingResponse" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="APIException" type="tns:APIException" />
+      <xs:complexType name="APIException">
+        <xs:sequence>
+          <xs:element name="messageDetail" nillable="true" type="xs:string" />
+          <xs:element name="errorType" nillable="true" type="xs:string" />
+          <xs:element name="messageMap" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+    </xs:schema>
+  </wsdl:types>
+  <wsdl:message name="placeBet">
+    <wsdl:part name="parameters" element="tns:placeBet" />
+  </wsdl:message>
+  <wsdl:message name="validateBet">
+    <wsdl:part name="parameters" element="tns:validateBet" />
+  </wsdl:message>
+  <wsdl:message name="validateBetResponse">
+    <wsdl:part name="parameters" element="tns:validateBetResponse" />
+  </wsdl:message>
+  <wsdl:message name="placeBetResponse">
+    <wsdl:part name="parameters" element="tns:placeBetResponse" />
+  </wsdl:message>
+  <wsdl:message name="APIException">
+    <wsdl:part name="APIException" element="tns:APIException" />
+  </wsdl:message>
+  <wsdl:portType name="BettingService">
+    <wsdl:operation name="validateBet">
+      <wsdl:input name="validateBet" message="tns:validateBet" />
+      <wsdl:output name="validateBetResponse" message="tns:validateBetResponse" />
+      <wsdl:fault name="APIException" message="tns:APIException" />
+    </wsdl:operation>
+    <wsdl:operation name="placeBet">
+      <wsdl:input name="placeBet" message="tns:placeBet" />
+      <wsdl:output name="placeBetResponse" message="tns:placeBetResponse" />
+      <wsdl:fault name="APIException" message="tns:APIException" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="bettingSoapBinding" type="tns:BettingService">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="validateBet">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="validateBet">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="validateBetResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="APIException">
+        <soap:fault use="literal" name="APIException" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="placeBet">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="placeBet">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="placeBetResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="APIException">
+        <soap:fault use="literal" name="APIException" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="betting">
+    <wsdl:port name="BettingServiceImplPort" binding="tns:bettingSoapBinding">
+      <soap:address location="https://api.tab.com.au/tabapi/services/betting" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

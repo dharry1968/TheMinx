@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Report DataSourceName="sqlDataSource3" Width="13.110237121582in" Name="Results" xmlns="http://schemas.telerik.com/reporting/2012/3.6">
+  <DataSources>
+    <SqlDataSource ConnectionString="TheMinx" SelectCommand="select * from Results_Report;" Name="sqlDataSource3" />
+  </DataSources>
+  <Items>
+    <PageHeaderSection Height="1.29999994953474cm" Name="pageHeaderSection1">
+      <Items>
+        <TextBox Width="2.9999992934863cm" Height="0.999999899069471cm" Left="0.299999848604206cm" Top="0cm" Value="Results Report" Name="textBox8" />
+      </Items>
+    </PageHeaderSection>
+    <DetailSection Height="2in" Name="detailSection1">
+      <Items>
+        <TextBox Width="2.60000030279159cm" Height="0.559899998031855cm" Left="0.299999848604206cm" Top="0.00010012308478013cm" Value="=Fields.RaceDate" Name="textBox1" />
+        <TextBox Width="1.50000005046526cm" Height="0.559899998031855cm" Left="3.20000053829615cm" Top="0.00010012308478013cm" Value="=Fields.RaceTime" Name="textBox2" />
+        <TextBox Width="4.09999994953474cm" Height="0.559899998031855cm" Left="4.99999989906947cm" Top="0.00010012308478013cm" Value="=Fields.Venue" Name="textBox3" />
+        <TextBox Width="0.899999142090503cm" Height="0.559899998031855cm" Left="9.40000010093053cm" Top="0.00010012308478013cm" Value="=Fields.RaceNum" Name="textBox4" />
+        <TextBox Width="0.999999495347355cm" Height="0.559899998031855cm" Left="10.6000003027916cm" Top="0.00010012308478013cm" Value="=Fields.Box" Name="textBox5" />
+        <TextBox Width="3.79999888976418cm" Height="0.560000121116635cm" Left="11.9000000504653cm" Top="0cm" Value="=Fields.Runner" Name="textBox6" />
+        <TextBox Width="1.19999939441683cm" Height="0.559899998031855cm" Left="16cm" Top="0.00010012308478013cm" Value="=Fields.Position" Name="textBox7" />
+      </Items>
+    </DetailSection>
+    <PageFooterSection Height="1in" Name="pageFooterSection1" />
+  </Items>
+  <StyleSheet>
+    <StyleRule>
+      <Style>
+        <Padding Left="2pt" Right="2pt" />
+      </Style>
+      <Selectors>
+        <TypeSelector Type="TextItemBase" />
+        <TypeSelector Type="HtmlTextBox" />
+      </Selectors>
+    </StyleRule>
+  </StyleSheet>
+  <PageSettings>
+    <PageSettings PaperKind="Letter" Landscape="False">
+      <Margins>
+        <MarginsU Left="1in" Right="1in" Top="1in" Bottom="1in" />
+      </Margins>
+    </PageSettings>
+  </PageSettings>
+  <Groups>
+    <Group Name="group">
+      <GroupHeader>
+        <GroupHeaderSection Height="2.5cm" Name="groupHeaderSection" />
+      </GroupHeader>
+      <GroupFooter>
+        <GroupFooterSection Height="2.5cm" Name="groupFooterSection" />
+      </GroupFooter>
+      <Groupings>
+        <Grouping Expression="=Fields.Venue" />
+        <Grouping Expression="=Fields.RaceNum" />
+      </Groupings>
+      <Sortings>
+        <Sorting Expression="=Fields.Box" Direction="Asc" />
+      </Sortings>
+      <Filters>
+        <Filter Expression="=Fields.RaceDate" Operator="Equal" Value="&quot;20140910&quot;" />
+      </Filters>
+    </Group>
+  </Groups>
+  <ReportParameters>
+    <ReportParameter Name="RaceDate" Text="Race Date" />
+  </ReportParameters>
+</Report>

@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="_UpgradeWizard_Files\UpgradeWizardLog.xslt"?>
+<log>
+  <event action="Analyze" type="Success" name="Assembly References" path="D:\OneDrive\Visual Studio 2012\Projects\Racing\TheMinx\TheMinx\TheMinx.csproj" />
+  <event action="Analyze" type="Success" name="Assembly References" path="D:\OneDrive\Visual Studio 2012\Projects\Racing\TheMinx\TheMinx\App.config" />
+  <event action="Analyze" type="Success" name="Http Handlers" path="D:\OneDrive\Visual Studio 2012\Projects\Racing\TheMinx\TheMinx\App.config" />
+  <event action="Analyze" type="Success" name="Handlers (IIS7+)" path="D:\OneDrive\Visual Studio 2012\Projects\Racing\TheMinx\TheMinx\App.config" />
+  <event action="Analyze" type="Success" name="Config Sections" path="D:\OneDrive\Visual Studio 2012\Projects\Racing\TheMinx\TheMinx\App.config" />
+  <event action="Analyze" type="Success" name="Render Extensions" path="D:\OneDrive\Visual Studio 2012\Projects\Racing\TheMinx\TheMinx\App.config" />
+  <event action="Analyze" type="Success" name="Session State Providers" path="D:\OneDrive\Visual Studio 2012\Projects\Racing\TheMinx\TheMinx\App.config" />
+  <event action="Analyze" type="Success" name="App.config" path="D:\OneDrive\Visual Studio 2012\Projects\Racing\TheMinx\TheMinx\App.config" />
+  <event action="Analyze" type="Success" name="frmBetResults.resx" path="D:\OneDrive\Visual Studio 2012\Projects\Racing\TheMinx\TheMinx\frmBetResults.resx" />
+  <event action="Analyze" type="Success" name="frmChooseDate.resx" path="D:\OneDrive\Visual Studio 2012\Projects\Racing\TheMinx\TheMinx\frmChooseDate.resx" />
+  <event action="Analyze" type="Success" name="frmMain.resx" path="D:\OneDrive\Visual Studio 2012\Projects\Racing\TheMinx\TheMinx\frmMain.resx" />
+  <event action="Analyze" type="Success" name="frmSettings.resx" path="D:\OneDrive\Visual Studio 2012\Projects\Racing\TheMinx\TheMinx\frmSettings.resx" />
+  <event action="Analyze" type="Success" name="Assembly References" path="D:\OneDrive\Visual Studio 2012\Projects\Racing\TheMinx\TheMinx\packages.config" />
+  <event action="Analyze" type="Success" name="Http Handlers" path="D:\OneDrive\Visual Studio 2012\Projects\Racing\TheMinx\TheMinx\packages.config" />
+  <event action="Analyze" type="Success" name="Handlers (IIS7+)" path="D:\OneDrive\Visual Studio 2012\Projects\Racing\TheMinx\TheMinx\packages.config" />
+  <event action="Analyze" type="Success" name="Config Sections" path="D:\OneDrive\Visual Studio 2012\Projects\Racing\TheMinx\TheMinx\packages.config" />
+  <event action="Analyze" type="Success" name="Render Extensions" path="D:\OneDrive\Visual Studio 2012\Projects\Racing\TheMinx\TheMinx\packages.config" />
+  <event action="Analyze" type="Success" name="Session State Providers" path="D:\OneDrive\Visual Studio 2012\Projects\Racing\TheMinx\TheMinx\packages.config" />
+  <event action="Analyze" type="Success" name="packages.config" path="D:\OneDrive\Visual Studio 2012\Projects\Racing\TheMinx\TheMinx\packages.config" />
+  <event action="Analyze" type="Success" name="Resources.resx" path="D:\OneDrive\Visual Studio 2012\Projects\Racing\TheMinx\TheMinx\Properties\Resources.resx" />
+  <event action="Analyze" type="Success" name="Results.resx" path="D:\OneDrive\Visual Studio 2012\Projects\Racing\TheMinx\TheMinx\Results.resx" />
+  <event action="Analyze" type="Success" name="Results_Report.resx" path="D:\OneDrive\Visual Studio 2012\Projects\Racing\TheMinx\TheMinx\Results_Report.resx" />
+  <event action="Analyze" type="Success" name="TheMinx" path="D:\OneDrive\Visual Studio 2012\Projects\Racing\TheMinx\TheMinx\TheMinx.csproj" />
+  <event action="Analyze" type="Success" name="Assembly References" path="D:\OneDrive\Visual Studio 2012\Projects\Racing\TheMinx\LumenWorks.Framework.IO\LumenWorks.Framework.IO.csproj" />
+  <event action="Analyze" type="Success" name="ExceptionMessage.resx" path="D:\OneDrive\Visual Studio 2012\Projects\Racing\TheMinx\LumenWorks.Framework.IO\Csv\Resources\ExceptionMessage.resx" />
+  <event action="Analyze" type="Success" name="LumenWorks.Framework.IO" path="D:\OneDrive\Visual Studio 2012\Projects\Racing\TheMinx\LumenWorks.Framework.IO\LumenWorks.Framework.IO.csproj" />
+  <event action="Analyze" type="Success" name="Assembly References" path="D:\OneDrive\Visual Studio 2012\Projects\Racing\TheMinx\ProgressIndicator\ProgressIndicator.csproj" />
+  <event action="Analyze" type="Success" name="ProgressIndicator.resx" path="D:\OneDrive\Visual Studio 2012\Projects\Racing\TheMinx\ProgressIndicator\ProgressIndicator.resx" />
+  <event action="Analyze" type="Success" name="ProgressIndicator" path="D:\OneDrive\Visual Studio 2012\Projects\Racing\TheMinx\ProgressIndicator\ProgressIndicator.csproj" />
+  <event action="Analyze" type="Success" name="TheMinx" path="D:\OneDrive\Visual Studio 2012\Projects\Racing\TheMinx\TheMinx.sln" />
+  <event action="Backup" type="Success" name="TheMinx" path="D:\OneDrive\Visual Studio 2012\Projects\Racing\TheMinx\TheMinx\TheMinx.csproj" />
+  <event action="Upgrade" type="Success" name="Assembly References" path="D:\OneDrive\Visual Studio 2012\Projects\Racing\TheMinx\TheMinx\TheMinx.csproj" />
+  <event action="Upgrade" type="Success" name="TheMinx" path="D:\OneDrive\Visual Studio 2012\Projects\Racing\TheMinx\TheMinx\TheMinx.csproj" />
+  <event action="Upgrade" type="Success" name="TheMinx" path="D:\OneDrive\Visual Studio 2012\Projects\Racing\TheMinx\TheMinx.sln" />
+</log>
